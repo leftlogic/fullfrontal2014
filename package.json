@@ -1,0 +1,20 @@
+{
+  "name": "fullfrontal2014",
+  "version": "1.0.0",
+  "description": "Full Frontal 2014",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leftlogic/fullfrontal2014.git"
+  },
+  "author": "Remy Sharp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leftlogic/fullfrontal2014/issues"
+  },
+  "homepage": "http://2014.full-frontal.org",
+  "private": true
+}
