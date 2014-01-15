@@ -4,10 +4,6 @@ var fs = require('fs'),
 var index = fs.readFileSync('index.html', 'utf8');
 
 http.createServer(function (req, res) {
-  if (req.url === '/') {
-    res.writeHead(200, { 'content-type': 'text/html' });
-    res.end(index);
-  } else {
-    res.end();
-  }
+  res.writeHead(200, { 'content-type': 'text/html' });
+  res.end(index);
 }).listen(process.env.PORT);
