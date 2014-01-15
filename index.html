@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/OXaDopo/1/edit
+-->
+<head>
+<meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width">
+  <title>Full Frontal :: JavaScript Conference :: 7th November 2014</title>
+  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+
+
+<style id="jsbin-css">
+html, body {
+  background: #111;
+  color: #DDD;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  font-weight: 100;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+}
+
+small {
+  font-size: 50%;
+}
+
+.flex-container {
+  height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+
+.flex-item:nth-child(1) {
+    transition: font-size .1s ease-out;
+    -webkit-transition: font-size .1s ease-out;
+    -moz-transition: font-size .1s ease-out;
+    -o-transition: font-size .1s ease-out;
+    -ms-transition: font-size .1s ease-out;
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    }
+
+/*
+    Legacy Firefox implementation treats all flex containers
+    as inline-block elements.
+*/
+
+@-moz-document url-prefix() {
+.flex-container {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    }
+
+}
+</style>
+</head>
+<body>
+  <div class="flex-container">
+    <div id="date" class="flex-item">
+      <h1>7 November</h1>
+      <small>Diary. Now.</small>
+    </div>
+  </div>
+<script>
+var addEvent = (function () {
+  if (document.addEventListener) {
+    return function (el, type, fn) {
+      if (el && el.nodeName || el === window) {
+        el.addEventListener(type, fn, false);
+      } else if (el && el.length) {
+        for (var i = 0; i < el.length; i++) {
+          addEvent(el[i], type, fn);
+        }
+      }
+    };
+  } else {
+    return function (el, type, fn) {
+      if (el && el.nodeName || el === window) {
+        el.attachEvent('on' + type, function () { return fn.call(el, window.event); });
+      } else if (el && el.length) {
+        for (var i = 0; i < el.length; i++) {
+          addEvent(el[i], type, fn);
+        }
+      }
+    };
+  }
+})();
+
+function fitText(nodes, kompressor, options) {
+  // Setup options
+  var compressor = kompressor || 1,
+      resizers = [];
+
+  if (!nodes[0]) {
+    nodes = [nodes];
+  }
+
+  if (options === undefined) options = {}; 
+  if (options.minFontSize === undefined) options.minFontSize = Number.NEGATIVE_INFINITY;
+  if (options.maxFontSize === undefined) options.maxFontSize = Number.POSITIVE_INFINITY;
+
+  var i = 0, length = nodes.length;
+
+  for (; i < length; i++) {
+    (function (el) {
+      var comp = el.currentStyle ? el.currentStyle : getComputedStyle(el, null);
+
+      // Resizer() resizes items based on the object width divided by the compressor * 10
+      var resizer = function () {
+        var width = parseFloat(comp.width);
+
+        el.style.fontSize = Math.max(Math.min(width / (compressor*10), parseFloat(options.maxFontSize)), parseFloat(options.minFontSize)) + 'px';
+        console.log(el.style.fontSize);
+      };
+
+      // Call once to set.
+      resizer();
+      resizers.push(resizer);
+    })(nodes[i]);
+  }
+
+  // Call on resize. Opera debounces their resize by default. 
+  addEvent(window, 'resize', function () {
+    var i = 0, length = resizers.length;
+    for (; i < length; i++) {
+      resizers[i]();
+    }
+  }, false);
+}
+
+setTimeout(function() {
+  fitText(document.getElementById('date'));
+}, 400);
+</script>
+</body>
+</html>
