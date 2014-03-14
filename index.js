@@ -1,9 +1,10 @@
-var fs = require('fs'),
+var st = require('st'),
     http = require('http');
 
-var index = fs.readFileSync('index.html', 'utf8');
+var mount = st({
+  path: 'public/',
+  url: '/',
+  index: 'index.html'
+});
 
-http.createServer(function (req, res) {
-  res.writeHead(200, { 'content-type': 'text/html' });
-  res.end(index);
-}).listen(process.env.PORT);
+http.createServer(mount).listen(process.env.PORT || 8000);

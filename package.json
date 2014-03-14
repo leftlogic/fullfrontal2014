@@ -16,5 +16,8 @@
     "url": "https://github.com/leftlogic/fullfrontal2014/issues"
   },
   "homepage": "http://2014.full-frontal.org",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "st": "~0.3.1"
+  }
 }
