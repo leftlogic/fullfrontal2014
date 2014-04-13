@@ -1,0 +1,436 @@
+{
+  "locations": [{
+    "type": "Venues",
+      "location": [
+        {
+          "name": "Duke of Yorks",
+          "detail": "Conference",
+          "url": "http://www.picturehouses.co.uk/cinema/Duke_Of_Yorks/"
+        },
+        {
+          "name": "The Lighthouse",
+          "detail": "Workshops",
+          "url": "http://goo.gl/maps/GTYX"
+        },
+        {
+          "name": "The Fountainhead",
+          "detail": "Pre Party",
+          "url": "http://goo.gl/maps/6FH8"
+        },
+        {
+          "name": "The Loft",
+          "detail": "After Party",
+          "url": "http://goo.gl/maps/xe61"
+        }
+      ]
+    },
+    {
+      "type": "Hotels",
+      "location": [
+        {
+          "name": "Jury's Inn",
+          "url": "http://brightonhotels.jurysinns.com/",
+          "detail": "£68 Thu, £80 Fri",
+          "extra": "next to Train station & close to venue",
+          "extra-discount": "quote \"Left Logic\" for the discount"
+        },
+        {
+          "name": "Travellodge",
+          "url": "http://www.travelodge.co.uk/hotels/info?hotelId=18",
+          "detail": "£22.80 Thu, £26.75 Fri"
+        },
+        {
+          "name": "My Hotel",
+          "url": "http://www.myhotels.com/my-hotel-brighton/index.html",
+          "detail": "Thu £100/£120, Fri £120/£140",
+          "extra": "standard and superior respectively"
+        },
+        {
+          "name": "Old Ship Hotel",
+          "url": "http://www.pumahotels.co.uk/hotels/old-ship-brighton-hotel/",
+          "detail": "Thu £92, Fri £142",
+          "extra": "close to after party venue"
+        }
+      ]
+    },
+    {
+      "type": "Food & Drink",
+      "location": [
+        {"name": "Bardsley's", "detail": "fish 'n chips", "url": "http://www.bardsleys-fishandchips.co.uk/map "},
+        {"name": "The Open House", "detail": "good pub food", "url": "http://goo.gl/csghA"},
+        {"name": "Circus Circus", "detail": "pub serving Thai food", "url": "http://goo.gl/VNUwb"}
+      ]
+    }
+  ],
+  "sponsors": {
+    "available": true,
+    "full": [
+      {
+        "url": "https://developers.google.com/live/chrome/",
+        "img": "chrome.png",
+        "blurb": "Google’s mission is to organise the world’s information and make it universally accessible and useful. [Find out more](https://developers.google.com/live/chrome/)."
+      },
+      {
+        "url": "http://www.adobe.com/products/creativecloud.html",
+        "img": "adobe.gif",
+        "blurb": "Discover new ways to work with Adobe Creative Cloud. All the tools you love, totally reimagined. Plus, new apps and more connected tools and services. Get started with a free [Creative Cloud Membership](http://www.adobe.com/products/creativecloud.html)."
+      }
+    ],
+    "half": [
+      {
+        "url": "http://www.webapplicationsuk.com/",
+        "img": "webappsuk.gif"
+      },
+      {
+        "url": "http://developer.blackberry.com/",
+        "img": "blackberry.gif"
+      },
+      {
+        "url": "http://mozilla.org/",
+        "img": "mozilla.gif"
+      },
+      {
+        "url": "http://modern.IE",
+        "img": "microsoft.gif"
+      }
+    ],
+    "small": [
+    {
+        "url": "http://p.ota.to/",
+        "img": "potato.png"
+
+    },{
+        "url": "http://uk.mailjet.com/?utm_source=full-frontal.org&utm_medium=banner&utm_campaign=sponsoring-full-frontal?p=full-frontal-2013",
+        "img": "mailjet.gif"
+      }]
+  },
+  "sessions": {
+    "startTime": "2013-11-08 09:00",
+    "sessions": [
+      {
+        "break": true,
+        "title": "Registration",
+        "duration": 40
+      },
+      {
+        "break": true,
+        "title": "Opening remarks",
+        "duration": 10
+      },
+      {
+        "background": "fence",
+        "duration": 40,
+        "title": "ES6 Uncensored",
+
+        "speaker": {
+          "name": "Angus Croll",
+          "twitter": "angustweets",
+          "photo": "angus.jpg"
+        },
+
+        "description": "The latest JavaScript standard is just around the corner and language enthusiasts are already salivating over all the new toys coming their way. But, be warned, there are best practice zealots waiting in the wings, ready to re-label the fun parts as The Bad Parts and ruin the party. This time let's get a head start on them.\n\nWith copious examples drawing on various novel, weird and wacky combinations of upcoming features, I'll show you how to go wild with ES6 and, in the process, demonstrate that play is healthy and censorship is regressive.",
+
+        "bio": "Angus is a displaced Brit who now works for Twitter’s web platform team in San Francisco, and is one of the principal authors and maintainers of Twitter's Flight web framework. He's obsessed with JavaScript and literature in equal measure, and is a passionate advocate for the greater involvement of artists and creative thinkers in software.",
+
+        "links": [
+          { "@angustweets": "http://twitter.com/angustweets" },
+          { "github": "http://github.com/angus-c" },
+          { "anguscroll.com": "http://anguscroll.com" }
+        ],
+
+        "slides": false,
+        "audio": false,
+        "video": false
+
+      },
+  {
+        "background": "warehouse",
+        "duration": 40,
+        "title": "JavaScript in the Real World",
+        "description": "Anything that can be written in JavaScript, will eventually be written in JavaScript. First client side web apps, then server side programs and now you can control hardware, embedded devices and even flying robots with JavaScript.\n\nWe'll look at how you can get started writing JavaScript for Arduino and Raspberry Pi to read sensors and control servos and build your own JavaScript powered robots.",
+
+        "speaker": {
+          "name": "Andrew Nesbitt",
+          "twitter": "teabass",
+          "photo": "andrewnesbitt.jpg"
+        },
+
+        "bio": "Andrew is a passionate full stack developer. He spends most of his days programming in Ruby, playing with Node.js, contributing to open source projects and organising local developer user groups. He also aspires to one day take over the world with a fleet of JavaScript powered quadcopters.",
+
+        "links": [
+          { "@teabass": "http://twitter.com/teabass" },
+          { "github": "http://github.com/andrew" },
+          { "nesbitt.io": "http://nesbitt.io/" }
+        ],
+
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
+        "break": true,
+        "title": "Coffee break (30 mins)",
+        "duration": 30
+      },
+      {
+        "background": "shops",
+        "duration": 40,
+        "title": "Mobile Is Not A Thing; It Is Everything.",
+
+        "description": "The stratospheric rise in mobile subscribers, devices, services and apps has led to an even bigger explosion in the lack of understanding of how to design, develop and most importantly, recognize new opportunities with not only these new devices, but new use cases altogether.\n\nLet's step through the processes to help identify content strategies, design workflows and forecasting methods to unlock the true potential of mobile, not only for apps, but for the web and new channels of communication altogether.",
+
+        "speaker": {
+          "name": "Joe McCann",
+          "twitter": "joemccann",
+          "photo": "happy-joe.jpg"
+        },
+
+        "bio": "Joe McCann is the Director of Creative Technology at Mother, an award-winning creative agency in New York City and he is also a Managing Director and Partner at The Node Firm, a global collective of Node.js experts and enthusiasts.\n\nJoe's experience in various industries is widespread: from music and live events, to fashion, to Wall Street and even real estate, the perspective he brings to the mobile, design and software engineering industries is extremely rare and unique. Joe advises a number of technology startups and has spoken at conferences all over the world including SXSW, Adobe Phonegap Day (Amsterdam), Android Only (Stockholm),  PulsoConf (Bogota, Colombia), Morningstar Financial Developers Conference (Chicago) and many, many more.",
+
+        "links": [
+          { "@joemccann": "https://twitter.com/joemccann" },
+          { "github": "https://github.com/joemccann" },
+          { "subprint.com": "http://subprint.com/blog" }
+        ],
+
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
+        "duration": 40,
+        "background": "mountains",
+        "title": "Pushing the Limits of Mobile Performance",
+        "description": "A focus on performance can make the difference between the success or failure of a web app. This talk will go through concrete examples of how the Mobile Gmail and Docs teams focused on performance when building their apps. Some of these techniques are well known, but others have not been shared before...",
+
+        "speaker": {
+          "name": "Andrew Grieve",
+          "twitter": false,
+          "photo": "agrieve.jpg"
+        },
+
+        "bio": "Andrew is a developer at Google who has worked on several mobile web projects, including Gmail and Google Docs. More recently, he's been leading a team working full-time on Cordova Android & iOS ports, both as part of the \"make the web better\" initiative, as well as a part of the Chrome Apps team",
+        "links": []
+      },
+      {
+        "break": true,
+        "duration": 90,
+        "title": "Lunch break (90 mins)"
+      },
+      {
+        "background": "subway",
+        "duration": 40,
+        "title": "Our web development workflow is completely broken",
+        "description": "With the introduction of HTML5 the way we look at the browser has completely changed, but what has happen to our development workflow?\n\nIn this talk I take you through the history of web tooling and challenge the assumptions our current generation of tooling is build upon. You will realize that your web development workflow is completely broken, and that you over the years, have been making it gradually worse and more complex by adding more tools to the chain.\n\nIt's time to rethink our tooling.",
+        "speaker": {
+          "name": "Kenneth Auchenberg",
+          "twitter": "auchenberg",
+          "photo": "kenneth.jpg"
+        },
+
+        "links": [
+          { "@auchenberg": "http://twitter.com/auchenberg" },
+          { "kenneth.io": "http://kenneth.io/" }
+        ],
+
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+
+      {
+        "background": "street",
+        "duration": 40,
+        "title": "Stunning visuals with Maths and...no JavaScript?",
+        "description": "Everybody has probably seen mathematical visualizations that were created using JavaScript. However, one thing that not everybody may know is that some of them can be perfectly replicated using nothing but HTML and CSS.\n\nThis talk is going to deconstruct some examples, explain the mathematical reasoning behind, reveal a few lesser known things about certain CSS properties and show how using a preprocessor can help with keeping these demos extremely customizable while actually writing very little code.",
+        "speaker": {
+          "name": "Ana Tudor",
+          "twitter": "thebabydino",
+          "photo": "ana.jpg"
+        },
+
+        "bio": "Loves maths, especially geometry. Enjoys playing with code. Passionate about experimenting & learning new things. Fascinated by astrophysics and science in general. Huge fan of technological advance & its applications in all fields. Shows an interest in motor sports, drawing, classic cartoons, rock music, cuddling toys and animals with sharp claws & big teeth. Dreams about owning a real tiger.",
+
+        "links": [
+          { "@thebabydino": "http://twitter.com/thebabydino" },
+          { "about.me/thebabydino": "http://about.me/thebabydino/" }
+        ],
+
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
+        "break": true,
+        "duration": 30,
+        "title": "Cake break (30 mins)"
+      },
+
+      {
+        "background": "bridge",
+        "duration": 40,
+
+        "title": "Building with Web Components using X-Tags",
+        "duration": 40,
+        "description": "In this tutorial we'll take a deep dive into how Web Components (A collection of technologies that includes Shadow DOM, HTML Templates, Custom Elements, and HTML Imports) can be used as building blocks to construct a functioning web application.\n\nWe'll review how each of the technologies under the web components umbrella work, how they work together, and how x-tags makes use of them to make modular, lightweight components. Special attention will be given to building applications for mobile devices with environments such as Firefox OS, Chrome OS, and PhoneGap.",
+
+        "speaker": {
+          "name": "Angelina Fabbro",
+          "photo": "angelina.jpg"
+        },
+
+        "links": [
+          { "@angelinamagnum": "http://twitter.com/angelinamagnum" },
+          { "github": "https://github.com/afabbro" },
+          { "realityhacking.net": "http://realityhacking.net/" }
+        ],
+
+        "slides": false,
+        "audio": false,
+        "video": false
+
+      },
+      {
+        "background": "space",
+        "break": false,
+        "title": "Time",
+        "description": "This thing all things devours:  \nBirds, beasts, trees, flowers;  \nGnaws iron, bites steel;  \nGrinds hard stones to meal;  \nSlays king, ruins town,  \nAnd beats high mountain down",
+        "duration": 40,
+        "speaker": {
+          "name": "Jeremy Keith",
+          "twitter": "adactio",
+          "photo": "jeremy.jpg",
+          "alt": "Yes, an 8 year old picture. The web remembers...sometimes..."
+        },
+        "bio": "Jeremy Keith lives in Brighton, England where he makes websites with the splendid design agency [Clearleft](http://clearleft.com). You may know him from such books as [DOM Scripting: JavaScript’s New Hope](http://domscripting.com/), [Bulletproof Ajax: The Browser Strikes Back](http://bulletproofajax.com/), and [HTML5 For Web Designers: Return Of The Standards](http://html5forwebdesigners.com/).\n\nHe’s the curator of the [dConstruct conference](http://dconstruct.org/) as well as [Brighton SF](http://brightonsf.adactio.com/), and he organised the world’s first [Science Hack Day](http://sciencehackday.com/). He also made the website [Huffduffer](http://huffduffer.com/) to allow people to make podcasts of found sounds—it’s like Instapaper for audio files.\n\nJeremy spends most of his time goofing off on the internet, documenting his time-wasting on [adactio.com](http://adactio.com), where he has been writing for over ten years.",
+        "links": [
+          { "@adactio": "http://twitter.com/adactio" },
+          { "adactio.com": "http://adactio.com/" },
+          { "huffduffer.com": "http://adactio.com/" },
+          { "saltercane.com": "http://saltercane.com" },
+          { "html5forwebdesigners.com": "http://html5forwebdesigners.com" },
+          { "clearleft.com": "http://clearleft.com" }
+        ],
+
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
+        "break": true,
+        "duration": 20,
+        "title": "Closing remarks"
+      },
+      {
+        "break": true,
+        "start": "19:00",
+        "end": "Late",
+        "duration": 90,
+        "afterparty": true,
+        "title": "After Party"
+      }
+    ]
+  },
+  "workshops": [
+    {
+      "title": "Fast and Beautiful Mobile Apps with PhoneGap",
+      "slug": "phonegap",
+      "ticket": {
+        "url": "https://leftlogic.stagehq.com/events/2413",
+        "price": "400"
+      },
+
+      "details": {
+        "date": "7th November",
+        "time": "9:00am",
+        "venue": "The Lighthouse"
+      },
+
+      "speaker": {
+        "name": "Brian LeRoux & Christophe Coenraets",
+        "photo": "phonegap.jpg",
+        "photo-faces": "brian-and-christophe.jpg"
+      },
+
+      "topics" : [
+        {
+          "title": "The PhoneGap APIs"
+        },
+        {
+          "title": "Topcoat"
+        },
+        {
+          "title": "The Single Page Architecture"
+        },
+        {
+          "title": "Client-side HTML templates"
+        },
+        {
+          "title": "Effective Touch Events"
+        },
+        {
+          "title": "Modularization Approaches"
+        },
+        {
+          "title": "Mobile Performance Optimization Techniques"
+        },
+        {
+          "title": "Comparison of  Leading JavaScript frameworks"
+        },
+        {
+          "title": "PhoneGap Plugins"
+        }
+
+      ],
+      "description": "Tired of Hello World? In this workshop, you will learn modern strategies and best practices to build native-like mobile applications with HTML, JavaScript, and CSS. You'll also learn how to use PhoneGap to leverage the native capabilities of your device in JavaScript and to package your HTML application as a native app for distribution through the different app stores.",
+
+      "extendedDescription": "With the focus on performance and architecture, this workshop will give you the keys to fast, robust, and successful PhoneGap applications.\n\nYou will build a PhoneGap application from scratch using the Single Page Architecture, HTML templates, touch events, modularization techniques, and many performance optimization techniques. We will also compare and contrast the leading JavaScript and Mobile Frameworks, and you will use the new Topcoat CSS toolkit as the basis for your application UI."
+    },
+    {
+      "soldout": false,
+      "title": "Debug, and Know Thy Tools",
+      "slug": "debug-and-tools",
+      "ticket": {
+        "url": "https://leftlogic.stagehq.com/events/2412",
+        "price": "400"
+      },
+
+      "details": {
+        "date": "7th November",
+        "time": "9:00am",
+        "venue": "The Lighthouse, Brighton"
+      },
+
+      "speaker": {
+        "name": "Remy Sharp",
+        "twitter": "rem",
+        "photo": "remy-devtools.jpg"
+      },
+
+      "topics" : [
+        {
+          "title": "Console",
+          "description": "Power features beyond console.log"
+        },
+        {
+          "title": "Network",
+          "description": "What's slow, why and the detail behind a request"
+        },
+        {
+          "title": "Source",
+          "description": "How to make DevTools your development IDE"
+        },
+        {
+          "title": "Performance",
+          "description": "How to read and investigate rendering issues"
+        },
+        {
+          "title": "Mobile",
+          "description": "Using the tools you know to debug tiny machines"
+        }
+      ],
+      "description": "Sure, you've moved past `alert` debugging and discovered console.log, but did you know you can replay XHR requests instead of having to repeat your steps to make the request? Or that you can proxy your local server through a browser configuration so your mobile phone can see it? This workshop is dedicated to learning the native developer tools baked in to the browser to make our life a little more bearable.",
+      "extendedDescription": "We will look at features of Chrome DevTools, what's available in Firefox debugging suite. We'll also look at remote mobile debugging using native tools and also look at the alternative tools where native support isn't available.\n\nThe workshop will mostly be about the foundation of debugging techniques, which apply way beyond just a single browser's debugger tool, but will raise your expectation of all web debugging environments."
+    }
+  ]
+}
