@@ -1,0 +1,14 @@
+section.locations.region(role='region', aria-labelledby='locations')
+  h2#locations.sectio-heading(role='heading', aria-level='2') Locations
+  ul
+    each locations in public._data.locations
+      li.location-category
+        h3.type(role='heading', aria-level='3')=locations.type
+        ul.locations-list
+          each location in locations.location
+            li.vcard.location
+              a.name.url.org.fn(href=location.url)=location.name
+              div.note
+                p.detail=location.detail
+                if location.extra-discount
+                  p.extra-discount=location.extra-discount

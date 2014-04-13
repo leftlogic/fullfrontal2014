@@ -1,0 +1,22 @@
+section.workshops.region.alt(role='region', aria-labelledby='workshops')
+  each workshop, index in public._data.workshops
+    h2#workshops.section-heading(role='heading', aria-level='2') Workshop #{index+1}
+    if config.onsale
+      if config.soldout[workshop.slug]
+        a.button.sold-out(href='/workshop/' + workshop.slug) Sold Out
+      else
+        a.button.buy(href='/workshop/' + workshop.slug) Buy Tickets
+    else
+      a.button.buy(href='/workshop/' + workshop.slug) Find More
+    div.workshop-wrapper
+      section.workshop(id=workshop.slug)
+        header
+          h3.title(role='heading', aria-level='3')=workshop.title
+          div.speaker=workshop.speaker.name
+        p.description=workshop.description
+        if workshop.topics
+          ul.topics
+            each topic in workshop.topics
+              li=topic.title
+                if topic.description
+                  =': ' + topic.description

@@ -387,7 +387,6 @@
       "extendedDescription": "With the focus on performance and architecture, this workshop will give you the keys to fast, robust, and successful PhoneGap applications.\n\nYou will build a PhoneGap application from scratch using the Single Page Architecture, HTML templates, touch events, modularization techniques, and many performance optimization techniques. We will also compare and contrast the leading JavaScript and Mobile Frameworks, and you will use the new Topcoat CSS toolkit as the basis for your application UI."
     },
     {
-      "soldout": false,
       "title": "Debug, and Know Thy Tools",
       "slug": "debug-and-tools",
       "ticket": {

@@ -1,19 +1,19 @@
 {
   "globals": {
     "siteTitle": "Full Frontal :: JavaScript Conference :: 7th November 2014",
-    "analytics": "UA-1656750-XX",
+    "analytics": "UA-1656750-32",
     "config": {
       "onsale": true,
-        "soldout": {
-          "conference": true,
-          "workshops": true,
-          "phonegap": true,
-          "debug-and-tools": true
-        },
-        "mode": "schedule",
-        "comments": {
-          "mode-options": "titles|speakers|schedule // just a comment"
-        }
+      "soldout": {
+        "conference": false,
+        "workshops": false,
+        "phonegap": true,
+        "debug-and-tools": false
+      },
+      "mode": "titles",
+      "comments": {
+        "mode-options": "titles|speakers|schedule // just a comment"
+      }
     }
   }
 }

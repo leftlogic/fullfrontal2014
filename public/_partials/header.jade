@@ -1,0 +1,65 @@
+doctype
+html#fullfrontal-2014
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    title= siteTitle
+
+    link(rel='icon', href='/img/favicon.png')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='all-the-source', href='http://github.com/leftlogic/fullfrontal2014')
+    link(rel='author', href='/humans.txt')
+
+    <!--[if lt IE 9]>
+    script(src='/js/html5shiv.min.js')
+    <![endif]-->
+
+    if environment == "production"
+      script.
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '#{analytics}']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+        })();
+
+    script.
+      document.documentElement.className = 'hasjs';
+
+  body
+
+    header.masthead(role='banner')
+      nav(role='navigation')
+        each menu in ['sessions', 'workshops', 'locations', 'sponsors']
+          a(href='#' + menu)=capitalize(menu)
+      
+      p#show-menu Pull down for navigation...
+
+      h1.logo(role='heading', aria-level='1')
+        img(src='images/ff_yellow.png')
+
+      div.details-tickets-wrapper
+
+        div.details-wrapper
+          div.details.vevent
+            span.summary Full Frontal 2014
+            time.dtstart(title='2014-11-07T09:00', datetime='2014-11-07T09:00') 7th November 2014
+            span.location Brighton, UK
+
+        div.tickets-wrapper
+          div.tickets
+            if config.onsale
+              if config.soldout.conference
+                if config.soldout.workshops
+                  span.button.sold-out.nogo Sold Out
+                else
+                  a#buy.button.buy(href='http://leftlogic.stagehq.com')
+              else
+                a#buy.button.buy(href='http://leftlogic.stagehq.com') Buy Tickets &pound;150
+                  abbr.buy-vat(title='plus Value Added Tax') +VAT
+            else
+              span.button.nogo On sale 10-July 10am

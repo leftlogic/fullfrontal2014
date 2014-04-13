@@ -1,0 +1,5 @@
+section.sessions.region(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
+  h2#sessions.section-heading(role='heading', aria-level='2') Schedule
+  ol
+    each session in public._data.sessions.sessions
+      li

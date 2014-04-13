@@ -1,0 +1,14 @@
+section.sponsors.region.alt(role='region', aria-labelledby='sponsors')
+  h2#sponsors.sponsors-heading(role='heading', aria-level='2') Sponsors
+  
+  if public._data.sponsors.available
+    a(href='/sponsorship') Become a sponsor
+
+  if public._data.sponsors.full.length
+    section.monty.full-monty
+      h3.type(role='heading', aria-level='3') Full Monty Sponsors
+
+      each sponsor in public._data.sponsors.full
+        div.sponsors-wrapper
+          section.sponsor
+            a.logo(href=sponsor.url)
