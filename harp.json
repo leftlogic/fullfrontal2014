@@ -10,9 +10,11 @@
         "phonegap": true,
         "debug-and-tools": false
       },
+      "phase": 1,
       "mode": "titles",
       "comments": {
-        "mode-options": "titles|speakers|schedule // just a comment"
+        "mode-options": "titles|speakers|schedule // just a comment",
+        "phase-options": "0|1|2 // just a comment"
       }
     }
   }

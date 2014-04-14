@@ -2,4 +2,27 @@ section.sessions.region(class='session-style-' + config.mode, role='region', ari
   h2#sessions.section-heading(role='heading', aria-level='2') Schedule
   ol
     each session in public._data.sessions.sessions
-      li
+      li.session#slug
+        div.session-wrapper
+          if session.break
+            header.break
+              div.time Start &mdash; End
+              h3.title(role='heading', aria-level='3')= session.title
+          else
+            header.session-header
+              div.time Start &mdash; End
+              div.title-wrapper
+                h3.title(role='heading', aria-level='3')= session.title
+                if session.speaker.name
+                  div.speaker= session.speaker.name
+            div.session-body
+              div.veil
+                div.description-wrapper
+                  if session.description
+                    :markdown= session.description
+                  if session.bio
+                    div.bio
+                      :markdown= session.bio
+                if session.speaker.photo
+                  div.mugshot(alt=session.speaker.alt?session.speaker.alt:null)
+                    img(src='/images/speakers/' + session.speaker.photo)
