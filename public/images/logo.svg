@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="306px" height="286px" viewBox="0 0 306 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0 (7574) - http://www.bohemiancoding.com/sketch -->
+    <title>logo1 [Converted]</title>
+    <description>Created with Sketch.</description>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6.25" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.901960784   0 0 0 0 0.368627451  0 0 0 0.7 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path id="path-2" d="M20,59.951 L19.997,39.95 L39.989,39.893 L39.968,19.914 L59.934,19.929 L59.931,0.001 L280,0.001 L280,200 L260,200 L260,220 L240,220 L240,239.961 L220,239.961 L220,260 L0,260 L0,59.951 L20,59.951 L20,59.951 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="logo" sketch:type="MSLayerGroup" transform="translate(13.000000, 13.000000)">
+            <g id="background" filter="url(#filter-1)">
+                <use fill="#56D67E" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-2"></use>
+                <use fill="none" xlink:href="#path-2"></use>
+            </g>
+            <path d="M109.97,215.971 L109.97,135.97 L139.97,135.97 L139.97,105.037 L109.97,105.037 L109.97,75.97 L139.97,75.97 L139.97,45 L80,45 L80,104.879 L60,104.879 L60,135.954 L80,135.954 L80,215.971 L109.97,215.971 L109.97,215.971 Z" id="F" fill="#030303" sketch:type="MSShapeGroup"></path>
+            <path d="M189.97,215.971 L189.97,135.97 L219.97,135.97 L219.97,105.037 L189.97,105.037 L189.97,75.97 L219.97,75.97 L219.97,45 L160,45 L160,104.879 L140,104.879 L140,135.954 L160,135.954 L160,215.971 L189.97,215.971 L189.97,215.971 Z" id="F" fill="#030303" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
