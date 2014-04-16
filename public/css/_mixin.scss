@@ -21,3 +21,9 @@
 %clearfix {
 	@include clearfix;
 }
+
+@mixin box-sizing ($val) {
+  @each $prefix in -webkit-, -moz-, '' {
+    #{$prefix}box-sizing: $val;
+  }
+}
