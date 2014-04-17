@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 0;
 }
-a:link, a:visited, a:focus, a:hover, a:active {
+a:link, a:visited, a:hover, a:focus, a:active {
    color: $c-orange;
 }
 
@@ -41,7 +41,7 @@ a:link, a:visited, a:focus, a:hover, a:active {
       color: $c-green;
       text-decoration: none;
     }
-    &:focus, &:hover, &:active {
+    &:hover, &:focus, &:active {
 
     }
   }
@@ -211,7 +211,7 @@ a:link, a:visited, a:focus, a:hover, a:active {
     display: block;
     font-family: 'Anonymous Pro', monospace;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
     text-shadow: 1px 1px 0 rgba($c-white, .4);
   }
 }
