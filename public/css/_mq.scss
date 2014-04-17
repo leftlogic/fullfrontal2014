@@ -1,0 +1,118 @@
+/* 300
+   ========================================================================== */
+@media (min-width: 300px) {
+  .case {
+    display: table;
+    height: 93px;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+  }
+  .mother,
+  .case-button-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 135px;
+  }
+  .mother {
+    margin-bottom: 0;
+    text-align: left;
+    width: auto;
+  }
+  .twitter {
+    font-size: 18px;
+  }
+}
+
+/* 480
+   ========================================================================== */
+@media (min-width: 480px) {
+  #left-logic {
+    background-size: 100%;
+    height: 47px;
+    width: 226px;
+  }
+}
+
+/* 640
+   ========================================================================== */
+@media (min-width: 640px) {
+  .twtter {
+    font-size: 40px;
+  }
+  .previously {
+    a {
+      font-size: 28px;
+    }
+  }
+}
+
+/* 768
+   ========================================================================== */
+@media (min-width: 768px) {
+  .nav-main {
+    display: none;
+  }
+  .screen-wrapper {
+    padding-bottom: 40px;
+
+    &:after {
+      height: 40px;
+    }
+  }
+  .screen {
+    padding: 20px 20px 0;
+  }
+  .screen-date {
+    font-size: 21px;
+  }
+  .screen-button {
+    margin: 80px auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .details-tickets-wrapper {
+    font-size: 48px;
+  }
+  .tickets-line {
+    display: block;
+  }
+  .screen-shadow {
+    &:after {
+      border-radius: 100px;
+    }
+  }
+
+  .case {
+    height: 133px;
+    padding: 0 20px;
+  }
+  .vents {
+    height: 167px;
+
+    &:after {
+      background-image: url(../images/vents-big.png); 
+      height: 170px;
+    }
+    // led gradient
+    &:before {
+      box-shadow: 0 0 120px 120px $c-led-red;
+      right: 151px;
+      top: -66px;
+    }
+  }
+  .vents-on {
+    &:before {
+      box-shadow: 0 0 120px 120px $c-led-blue;
+    }
+  }
+
+  .twitter {
+    font-size: 60px;
+  }
+  .previously {
+    a {
+      font-size: 28px;
+    }
+  }
+}

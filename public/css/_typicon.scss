@@ -1,0 +1,46 @@
+@include font-face('typicon', '../fonts/typicon');
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'typicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e600";
+}
+.icon-location:before {
+  content: "\e601";
+}
+.icon-video:before {
+  content: "\e602";
+}
+.icon-notes:before {
+  content: "\e603";
+}
+.icon-spanner:before {
+  content: "\e604";
+}
+.icon-microphone:before {
+  content: "\e605";
+}
+.icon-social-twitter:before {
+  content: "\e606";
+}
+.icon-thumbs-up:before {
+  content: "\e607";
+}
+.icon-document-text:before {
+  content: "\e608";
+}
+.icon-beer:before {
+  content: "\e609";
+}

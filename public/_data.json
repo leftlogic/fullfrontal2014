@@ -1,6 +1,8 @@
 {
-  "locations": [{
-    "type": "Venues",
+  "locations": [
+    {
+      "type": "Venues",
+      "icon": "location",
       "location": [
         {
           "name": "Duke of Yorks",
@@ -26,6 +28,7 @@
     },
     {
       "type": "Hotels",
+      "icon": "home",
       "location": [
         {
           "name": "Jury's Inn",
@@ -55,6 +58,7 @@
     },
     {
       "type": "Food & Drink",
+      "icon": "beer",
       "location": [
         {"name": "Bardsley's", "detail": "fish 'n chips", "url": "http://www.bardsleys-fishandchips.co.uk/map "},
         {"name": "The Open House", "detail": "good pub food", "url": "http://goo.gl/csghA"},
@@ -72,7 +76,7 @@
       },
       {
         "url": "http://www.adobe.com/products/creativecloud.html",
-        "img": "adobe.gif",
+        "img": "adobe.png",
         "blurb": "Discover new ways to work with Adobe Creative Cloud. All the tools you love, totally reimagined. Plus, new apps and more connected tools and services. Get started with a free [Creative Cloud Membership](http://www.adobe.com/products/creativecloud.html)."
       }
     ],

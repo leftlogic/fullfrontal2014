@@ -5,26 +5,94 @@ $c-green: #56d67e;
 $c-green-glow: #00e65e;
 $c-white: #FFF;
 $c-black: #000;
+$c-led-red: #D35400;
+$c-led-blue: #299DE3;
+$c-text-normal: #525252;
+$c-text-title: #1f1f1f;
 
     // e9e6e5 grey line separator
     // e9c4b6 light orange
     // fdf9f7 even lighter orange (is orange with 10% opacity)
 
 @import "mixin";
+@import "typicon";
 
 
 @include font-face('cern', '../fonts/cern-terminal');
+
+@include font-face('Proxima Nova', '../fonts/proximanova/mark_simonson_-_proxima_nova_regular-webfont', normal);
+@include font-face('Proxima Nova', '../fonts/proximanova/mark_simonson_-_proxima_nova_semibold-webfont', 500);
+@include font-face('Proxima Nova', '../fonts/proximanova/mark_simonson_-_proxima_nova_bold-webfont', bold);
 
 *, *:after, *:before { 
   @include box-sizing(border-box);
 }
 body {
   background: $c-white;
+  color: $c-text-normal;
+  font-family: 'Proxima Nova', 'Open Sans', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
   margin: 0;
   padding: 0;
 }
-a:link, a:visited, a:hover, a:focus, a:active {
-   color: $c-orange;
+
+/* Typography
+   ========================================================================== */
+a {
+  border-bottom: 1px solid $c-orange;
+
+  &:link, &:visited, &:hover, &:focus, &:active { 
+    color: $c-orange;
+    text-decoration: none;
+  }
+}
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.schedule-title,
+.sponsor-title {
+  font-size: inherit;
+  font-weight: 500;
+}
+.session-title {
+  color: $c-text-title;
+  font-size: 34px;
+  font-weight: 500;
+}
+.session-content,
+.blurb {
+  font-weight: normal;
+}
+.session-list {
+  font-weight: 500;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & li {
+    &:before {
+      content: '\2713';
+    }
+  }
+}
+.tbc {
+  color: #9e9e9e;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .session-title,
+  .location .name {
+    font-size: 27px;
+  }
 }
 
 
@@ -39,7 +107,6 @@ a:link, a:visited, a:hover, a:focus, a:active {
   a {
     &, &:link, &:visited {
       color: $c-green;
-      text-decoration: none;
     }
     &:hover, &:focus, &:active {
 
@@ -183,7 +250,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
   }
   // led gradient
   &:before {
-    box-shadow: 0 0 90px 90px #D35400;
+    box-shadow: 0 0 90px 90px $c-led-red;
     border-radius: 100%;
     content: "";
     display: block;
@@ -199,7 +266,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
 }
 .vents-on {
   &:before {
-    box-shadow: 0 0 90px 90px #299DE3;
+    box-shadow: 0 0 90px 90px $c-led-blue;
   }
 }
 .mother {
@@ -274,7 +341,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
   }
 }
 .case-light {
-  background-color: #D35400;
+  background-color: $c-led-red;
   border-radius: 100%;
   box-shadow: inset 1px 1px 1px rgba(#080808, .25);
   display: inline-block;
@@ -286,12 +353,52 @@ a:link, a:visited, a:hover, a:focus, a:active {
   background-image: radial-gradient(ellipse at center, rgba($c-white, .1) 10%, rgba($c-white, 0) 60%);
 }
 .case-light-on {
-  background-color: #299DE3;
+  background-color: $c-led-blue;
 }
 
 
 /* Footer
    ========================================================================== */
+footer {
+  text-align: center;
+}
+.twitter {
+  border-bottom: 0 none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.at {
+  display: none;
+}
+.previously {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
+    margin-left: 5px;
+
+    &:before {
+      color: $c-orange;
+      content: '\00B7';
+      font-size: 21px;
+      margin-right: 5px;
+    }
+    &:first-child {
+      margin-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+  a {
+    font-size: 21px;
+  }
+}
 #left-logic {
   background-image: url(../images/left-logic.png);
   background-position: top;
@@ -309,96 +416,4 @@ a:link, a:visited, a:hover, a:focus, a:active {
 }
 
 
-/* 300
-   ========================================================================== */
-@media (min-width: 300px) {
-  .case {
-    display: table;
-    height: 93px;
-    padding-bottom: 0;
-    padding-top: 0;
-    width: 100%;
-  }
-  .mother,
-  .case-button-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    width: 135px;
-  }
-  .mother {
-    margin-bottom: 0;
-    text-align: left;
-    width: auto;
-  }
-}
-
-/* 480
-   ========================================================================== */
-@media (min-width: 480px) {
-  #left-logic {
-    background-size: 100%;
-    height: 47px;
-    width: 226px;
-  }
-}
-
-/* 768
-   ========================================================================== */
-@media (min-width: 768px) {
-  .nav-main {
-    display: none;
-  }
-  .screen-wrapper {
-    padding-bottom: 40px;
-
-    &:after {
-      height: 40px;
-    }
-  }
-  .screen {
-    padding: 20px 20px 0;
-  }
-  .screen-date {
-    font-size: 21px;
-  }
-  .screen-button {
-    margin: 80px auto;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .details-tickets-wrapper {
-    font-size: 48px;
-  }
-  .tickets-line {
-    display: block;
-  }
-  .screen-shadow {
-    &:after {
-      border-radius: 100px;
-    }
-  }
-
-  .case {
-    height: 133px;
-    padding: 0 20px;
-  }
-  .vents {
-    height: 167px;
-
-    &:after {
-      background-image: url(../images/vents-big.png); 
-      height: 170px;
-    }
-    // led gradient
-    &:before {
-      box-shadow: 0 0 120px 120px #D35400;
-      right: 151px;
-      top: -66px;
-    }
-  }
-  .vents-on {
-    &:before {
-      box-shadow: 0 0 120px 120px #299DE3;
-    }
-  }
-}
+@import "mq";

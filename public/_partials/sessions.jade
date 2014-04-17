@@ -1,28 +1,29 @@
-section.sessions.region(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
-  h2#sessions.section-heading(role='heading', aria-level='2') Schedule
+section(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
+  h2#sessions.section-title.icon-microphone(role='heading', aria-level='2') Schedule
   ol
     each session in public._data.sessions.sessions
-      li.session#slug
-        div.session-wrapper
+      li#slug
+        div
           if session.break
             header.break
-              div.time Start &mdash; End
-              h3.title(role='heading', aria-level='3')= session.title
+              div Start &mdash; End
+              h3.schedule-title(role='heading', aria-level='3')= session.title
           else
-            header.session-header
-              div.time Start &mdash; End
-              div.title-wrapper
-                h3.title(role='heading', aria-level='3')= session.title
+            header
+              div Start &mdash; End
+              div
+                h3.session-title(role='heading', aria-level='3')= session.title
                 if session.speaker.name
-                  div.speaker= session.speaker.name
-            div.session-body
-              div.veil
-                div.description-wrapper
+                  div
+                    a(href='#')= session.speaker.name
+            div
+              div
+                div.session-content
                   if session.description
                     :markdown= session.description
                   if session.bio
-                    div.bio
+                    div
                       :markdown= session.bio
                 if session.speaker.photo
-                  div.mugshot(alt=session.speaker.alt?session.speaker.alt:null)
+                  div(alt=session.speaker.alt?session.speaker.alt:null)
                     img(src='/images/speakers/' + session.speaker.photo)
