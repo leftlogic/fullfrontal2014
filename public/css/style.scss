@@ -290,6 +290,27 @@ a:link, a:visited, a:hover, a:focus, a:active {
 }
 
 
+/* Footer
+   ========================================================================== */
+#left-logic {
+  background-image: url(../images/left-logic.png);
+  background-position: top;
+  background-size: 113px, 23px;
+  display: block;
+  height: 23px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-indent: -200%;
+  width: 113px;
+
+  &:hover, &:focus, &:active {
+    background-position: bottom;
+  }
+}
+
+
+/* 300
+   ========================================================================== */
 @media (min-width: 300px) {
   .case {
     display: table;
@@ -311,6 +332,18 @@ a:link, a:visited, a:hover, a:focus, a:active {
   }
 }
 
+/* 480
+   ========================================================================== */
+@media (min-width: 480px) {
+  #left-logic {
+    background-size: 100%;
+    height: 47px;
+    width: 226px;
+  }
+}
+
+/* 768
+   ========================================================================== */
 @media (min-width: 768px) {
   .nav-main {
     display: none;
