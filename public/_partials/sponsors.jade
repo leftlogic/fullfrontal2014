@@ -1,16 +1,16 @@
-section(role='region', aria-labelledby='sponsors')
+hr.main-hr
+section.main(role='region', aria-labelledby='sponsors')
   h2#sponsors.section-title.icon-thumbs-up(role='heading', aria-level='2') Sponsors
   
   if public._data.sponsors.available
-    a(href='/sponsorship') Become a sponsor
+    a.button.button-disabled(href='/sponsorship') Become a sponsor
 
   each cat, key in public._data.sponsors
     if cat.length
-      section.monty(class=key + '-monty')
+      section.sub-hr.monty(class=key + '-monty')
         h3.sponsor-title(role='heading', aria-level='3')= capitalize(key) + ' Monty Sponsors'
-
-        each sponsor in cat
-          div.sponsors-wrapper
+        div.sponsors-wrapper
+          each sponsor in cat
             section.sponsor
-              a.logo(href=sponsor.url)
+              a(href=sponsor.url)
                 img(src='/images/sponsors/' + sponsor.img)

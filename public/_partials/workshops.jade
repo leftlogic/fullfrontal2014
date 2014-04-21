@@ -1,23 +1,24 @@
-section(role='region', aria-labelledby='workshops')
+hr.main-hr
+section.main(role='region', aria-labelledby='workshops')
   each workshop, index in public._data.workshops
     h2#workshops.section-title.icon-spanner(role='heading', aria-level='2') Workshop #{index+1}
     if config.onsale
       if config.soldout[workshop.slug]
-        a.button.sold-out(href='/workshop/' + workshop.slug) Sold Out
+        a.button.button-disabled(href='/workshop/' + workshop.slug) Sold Out
       else
-        a.button.buy(href='/workshop/' + workshop.slug) Buy Tickets
+        a.button(href='/workshop/' + workshop.slug) Buy Tickets
     else
-      a.button.buy(href='/workshop/' + workshop.slug) Find More
-    div
-      section(id=workshop.slug)
-        header
-          h3.session-title(role='heading', aria-level='3')=workshop.title
-          div
-            a(href='#')= workshop.speaker.name
-            div.time= workshop.details.date + ', ' +  workshop.details.time
-        p.session-content= workshop.description
+      a.button(href='/workshop/' + workshop.slug) Find More
+    section.sub-hr(id=workshop.slug)
+      header
+        h3.workshop-title(role='heading', aria-level='3')=workshop.title
+        div
+          a(href='#')= workshop.speaker.name
+          div.workshop-time= workshop.details.date + ', ' +  workshop.details.time
+      div.workshop-content-wrapper
+        p.workshop-content= workshop.description
         if workshop.topics
-          ul.session-list
+          ul.workshop-list
             each topic in workshop.topics
               li=topic.title
                 if topic.description

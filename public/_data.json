@@ -76,7 +76,7 @@
       },
       {
         "url": "http://www.adobe.com/products/creativecloud.html",
-        "img": "adobe.png",
+        "img": "adobe.gif",
         "blurb": "Discover new ways to work with Adobe Creative Cloud. All the tools you love, totally reimagined. Plus, new apps and more connected tools and services. Get started with a free [Creative Cloud Membership](http://www.adobe.com/products/creativecloud.html)."
       }
     ],
@@ -141,9 +141,9 @@
           { "anguscroll.com": "http://anguscroll.com" }
         ],
 
-        "slides": false,
-        "audio": false,
-        "video": false
+        "slides": "http://google.com",
+        "audio": "http://google.com",
+        "video": "http://google.com"
 
       },
   {
@@ -337,8 +337,8 @@
       },
 
       "details": {
-        "date": "7th November",
-        "time": "9:00am",
+        "date": "7th Nov 2014",
+        "time": "09:00 — 17:00",
         "venue": "The Lighthouse"
       },
 
@@ -391,8 +391,8 @@
       },
 
       "details": {
-        "date": "7th November",
-        "time": "9:00am",
+        "date": "7th Nov 2014",
+        "time": "09:00 — 17:00",
         "venue": "The Lighthouse, Brighton"
       },
 

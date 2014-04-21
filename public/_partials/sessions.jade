@@ -1,29 +1,52 @@
-section(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
+- var time = new Date(public._data.sessions.startTime)
+
+hr.main-hr
+section.main(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
   h2#sessions.section-title.icon-microphone(role='heading', aria-level='2') Schedule
-  ol
+  span.button.button-disabled Sold Out
+  ol.sessions-wrapper
     each session in public._data.sessions.sessions
-      li#slug
-        div
-          if session.break
-            header.break
-              div Start &mdash; End
-              h3.schedule-title(role='heading', aria-level='3')= session.title
-          else
-            header
-              div Start &mdash; End
-              div
-                h3.session-title(role='heading', aria-level='3')= session.title
-                if session.speaker.name
-                  div
-                    a(href='#')= session.speaker.name
-            div
-              div
-                div.session-content
-                  if session.description
-                    :markdown= session.description
-                  if session.bio
-                    div
-                      :markdown= session.bio
-                if session.speaker.photo
-                  div(alt=session.speaker.alt?session.speaker.alt:null)
-                    img(src='/images/speakers/' + session.speaker.photo)
+      - if (!session.start) {
+      -   session.start = pad(time.getHours()) + ':' + pad(time.getMinutes())
+      - }
+      - time.setMinutes(time.getMinutes() + session.duration)
+      - if (!session.end) {
+      -   session.end = pad(time.getHours()) + ':' + pad(time.getMinutes())
+      - }
+      li.session-wrapper.sub-hr#slug
+        if session.break
+          header.break
+            h3.schedule-title(role='heading', aria-level='3')= session.title
+            div.session-time
+              =session.start + ' '
+              &mdash;
+              =' ' + session.end
+        else
+          if session.speaker.photo
+            div.session-speaker-img-wrapper
+              div.session-speaker-img(alt=session.speaker.alt?session.speaker.alt:null, style='background-image:url(/images/speakers/' + session.speaker.photo + ')')
+                img(src='/images/speakers/' + session.speaker.photo)
+          div.session-about-wrapper
+            header.session-header
+              h3.session-title(role='heading', aria-level='3')= session.title
+              if session.speaker.name
+                div.session-speaker-name
+                  a(href='#')= session.speaker.name
+              div.session-time.session-speaker-time
+                =session.start + ' '
+                &mdash;
+                =' ' + session.end
+            div.session-content
+              if session.description
+                :markdown= session.description
+              if session.bio
+                div.session-bio
+                  include:markdown= session.bio
+              if session.slides || session.audio || session.video
+                div.session-links
+                  if session.slides
+                    a.icon-document-text(href=session.slides) Slides
+                  if session.audio
+                    a.icon-notes(href=session.audio) Audio
+                  if session.video
+                    a.icon-video(href=session.video) Video

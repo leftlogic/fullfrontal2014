@@ -1,6 +1,7 @@
 $c-grey: #525252;
 $c-grey-dark: #1f1f1f;
 $c-orange: #d48a6d;
+$c-orange-light: #e5b9a7;
 $c-green: #56d67e;
 $c-green-glow: #00e65e;
 $c-white: #FFF;
@@ -10,13 +11,9 @@ $c-led-blue: #299DE3;
 $c-text-normal: #525252;
 $c-text-title: #1f1f1f;
 
-    // e9e6e5 grey line separator
-    // e9c4b6 light orange
-    // fdf9f7 even lighter orange (is orange with 10% opacity)
 
 @import "mixin";
 @import "typicon";
-
 
 @include font-face('cern', '../fonts/cern-terminal');
 
@@ -31,7 +28,8 @@ body {
   background: $c-white;
   color: $c-text-normal;
   font-family: 'Proxima Nova', 'Open Sans', Arial, sans-serif;
-  font-size: 28px;
+  // font-size: 28px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 1.4;
   margin: 0;
@@ -51,31 +49,39 @@ a {
 .section-title {
   font-size: 40px;
   font-weight: bold;
+  line-height: 1;
+  margin: 0 0 30px;
   text-transform: uppercase;
 }
 .schedule-title,
 .sponsor-title {
   font-size: inherit;
   font-weight: 500;
+  margin: 0;
 }
-.session-title {
+.session-title,
+.workshop-title {
   color: $c-text-title;
   font-size: 34px;
   font-weight: 500;
+  margin: 0;
 }
 .session-content,
+.workshop-content,
 .blurb {
   font-weight: normal;
 }
-.session-list {
+.workshop-list {
   font-weight: 500;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1.4em;
 
   & li {
     &:before {
       content: '\2713';
+      padding-right: 10px;
+      margin-left: -1.4em;
     }
   }
 }
@@ -83,19 +89,54 @@ a {
   color: #9e9e9e;
 }
 @media (min-width: 768px) {
-  body {
-    font-size: 17px;
-  }
+  // body {
+  //   font-size: 17px;
+  // }
   .section-title {
     font-size: 30px;
+    margin-bottom: 36px;
   }
   .session-title,
+  .workshop-title,
   .location .name {
     font-size: 27px;
   }
 }
 
+/* Grid
+   ========================================================================== */
+.screen,
+.main,
+.footer {
+  margin: 0 auto;
+  max-width: 1002px;
+  padding-left: 10px;
+  padding-right: 10px;
 
+  @media (min-width: 640px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.case {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: 768px) {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+.footer {
+  @media (min-width: 768px) {
+    max-width: 628px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Header
+   ========================================================================== */
 .masthead {
   background: $c-black;
   color: $c-green;
@@ -113,24 +154,24 @@ a {
     }
   }
 }
-
-.screen,
-.case {
-  padding: 0 10px;
-}
-
-/* Screen
-   ========================================================================== */
 .nav-main {
-  display: none;
+  // display: none;
   padding-top: 30px;
   margin-bottom: 50px;
+  
   a {
+    border-bottom: 0 none;
     display: block;
     font-size: 32px;
     padding-bottom: 5px;
   }
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
+
+/* Screen
+   ========================================================================== */
 .screen-wrapper {
   padding-bottom: 20px;
   position: relative;
@@ -150,8 +191,6 @@ a {
   }
 }
 .screen {
-  margin: 0 auto;
-  max-width: 1024px;
   // font-smooth: never;
   // -webkit-font-smoothing : none;
 }
@@ -160,10 +199,18 @@ a {
   @include clearfix;
 }
 .screen-day {
-  float: left;
+  display: block;
+
+  @media (min-width: 320px) {
+    float: left;
+  }
 }
 .screen-time {
-  float: right;
+  display: block;
+
+  @media (min-width: 320px) {
+    float: right;
+  }
 }
 .logo {
   margin: 40px auto;
@@ -209,6 +256,37 @@ a {
     box-shadow: inset 0 0 0 10px rgba(#535758, .5), 0 0 0 3px rgba($c-white, .25);
   }
 }
+@media (min-width: 768px) {
+  .screen-wrapper {
+    padding-bottom: 40px;
+
+    &:after {
+      height: 40px;
+    }
+  }
+  .screen {
+    padding-top: 20px;
+  }
+  .screen-date {
+    font-size: 21px;
+  }
+  .screen-button {
+    margin: 80px auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .details-tickets-wrapper {
+    font-size: 48px;
+  }
+  .tickets-line {
+    display: block;
+  }
+  .screen-shadow {
+    &:after {
+      border-radius: 100px;
+    }
+  }
+}
 
 /* Machine
    ========================================================================== */
@@ -231,6 +309,17 @@ a {
     background: rgba($c-white, .5);
     bottom: 0;
   }
+  @media (min-width: 300px) {
+    display: table;
+    height: 93px;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    height: 133px;
+    padding: 0 20px;
+  }
 }
 .vents {
   background: $c-black url(../images/circuit.fw.png);
@@ -238,6 +327,10 @@ a {
   height: 107px;
   overflow: hidden;
   position: relative;
+
+  @media (min-width: 768px) {
+    height: 167px;
+  }
 
   &:after {
     background: transparent url(../images/vents-small.png) repeat scroll center center;
@@ -247,6 +340,11 @@ a {
     left: 0;
     right: 0;
     height: 110px;
+
+    @media (min-width: 768px) {
+      background-image: url(../images/vents-big.png); 
+      height: 170px;
+    }
   }
   // led gradient
   &:before {
@@ -262,11 +360,21 @@ a {
     right: 141px;
     top: -47px;
     width: 12px;
+
+    @media (min-width: 768px) {
+      box-shadow: 0 0 120px 120px $c-led-red;
+      right: 151px;
+      top: -66px;
+    }
   }
 }
 .vents-on {
   &:before {
     box-shadow: 0 0 90px 90px $c-led-blue;
+
+    @media (min-width: 768px) {
+      box-shadow: 0 0 120px 120px $c-led-blue;
+    }
   }
 }
 .mother {
@@ -284,6 +392,19 @@ a {
 }
 .case-button-wrapper {
   font-size: 0;
+}
+@media (min-width: 300px) {
+  .mother,
+  .case-button-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 136px;
+  }
+  .mother {
+    margin-bottom: 0;
+    text-align: left;
+    width: auto;
+  }
 }
 .case-button {
   border: 1px solid #a6a3a0;
@@ -356,17 +477,367 @@ a {
   background-color: $c-led-blue;
 }
 
+/* Sections
+   ========================================================================== */
+.main-hr {
+  &, &:before, &:after {
+    content: "";
+    border: 0 none;
+    border-top: 1px solid rgba(#ded9d6, .5);
+    display: block;
+    height: 10px;
+    margin: 0;
+    background: #ededeb;
+    background: -webkit-linear-gradient(bottom, #ededeb 0%, #fbfbf9 100%);
+    background:   linear-gradient(to top, #ededeb 0%, #fbfbf9 100%);
+  }
+  & {
+    background-size: 100% 10px;
+    height: 30px;
+    margin-bottom: 44px;
+  }
+  &:before {
+    margin-top: 9px;
+  }
+
+  @media (min-width: 768px) {
+    background-size: 100% 20px;
+    height: 60px;
+    margin-bottom: 74px;
+
+    &:before, &:after {
+      height: 20px;
+    }
+
+    &:before {
+      margin-top: 19px;
+    }
+  }
+}
+.sub-hr {
+  &:before {
+    border-bottom: 1px solid #e9e6e5;
+    border-top: 1px solid #e9e6e5;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.button {
+  &, &:link, &:visited, &:hover, &:focus, &:active {
+    border: 1px solid $c-orange;
+    border-radius: 5px;
+    box-shadow: inset -2px -2px 0 rgba($c-orange, .25);
+    display: inline-block;
+    font-size: 24px;
+    // font-weight: bold;
+    line-height: 2;
+    padding: 0 22px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px) {
+    width: 294px;
+  }
+}
+.button-disabled {
+  &, &:link, &:visited, &:hover, &:focus, &:active {
+    border-color: $c-orange-light;
+    background: rgba($c-orange, .1);
+    box-shadow: inset -2px -2px 0 rgba($c-orange-light, .25);
+    color: $c-orange-light;
+  }
+}
+
+.sessions-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.session-wrapper ,
+.monty {
+  padding-bottom: 30px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 20px;
+  }
+}
+
+/* Non Speaker Session
+   ========================================================================== */
+.break {
+  @include clearfix;
+}
+.schedule-title {
+  @media (min-width: 320px) {
+    float: left;
+  }
+}
+
+/* Speaker Session
+   ========================================================================== */
+.session-speaker-img {
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 1px solid $c-orange;
+  box-shadow: inset 0 0 0 2px $c-white;
+  height: 87px;
+  margin-right: 12px; // 24px
+  width: 87px;
+
+  & img {
+    visibility: hidden;
+  }
+
+  @media (min-width: 320px) {
+    float: left;
+    margin-bottom: 20px; // 40px
+  }
+
+  @media (min-width: 768px) {
+    height: 200px;
+    margin-right: 40px;
+    width: 127px;
+  }
+}
+.session-header {
+  @include clearfix;
+}
+.session-speaker-name {
+  @media (min-width: 320px) {
+    clear: left;
+    float: left;
+  }
+}
+.session-time {
+  @media (min-width: 320px) {
+    float: right;
+  }
+}
+.session-content {
+  clear: both;
+  padding-top: 25px; //50px
+
+  @media (min-width: 768px) {
+    padding-top: 40px;
+  }
+}
+.session-links {
+  margin-top: 20px; //40px
+
+  a {
+    display: block;
+    line-height: 40px;
+
+    &:before {
+      border-bottom: 3px solid $c-white;
+      font-size: 1.2em;
+      padding-bottom: 1px;
+      padding-right: 0.25em;
+      vertical-align: bottom;
+    }
+
+    @media (min-width: 320px) {
+      display: inline;
+      line-height: inherit;
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .session-wrapper {
+    // display: table;
+    // width: 100%;
+  }
+  .session-speaker-img-wrapper,
+  .session-about-wrapper {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .session-header {
+    // float: left;
+  }
+  .session-content {
+    clear: none;
+    display: table;
+    float: left;
+  }
+  .session-links {
+    display: table-caption;
+    margin-top: -1.65em;
+    text-align: right;
+
+    a {
+      margin-left: 30px;
+    }
+  }
+}
+
+/* Workshops
+   ========================================================================== */
+@media (min-width: 768px) {
+  .workshop-time {
+    float: right;
+  }
+  .workshop-content-wrapper {
+    @include clearfix;
+  }
+  .workshop-content {
+    float: left;
+    width: 65.28%;
+  }
+  .workshop-list {
+    float: right;
+    width: 30.56%;
+  }
+}
+
+/* Locations
+   ========================================================================== */
+.locations {
+  &, & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  & > li {
+    @media (min-width: 768px) {
+      display: inline-block;
+      // margin-left: 40px;
+      margin-left: 2%;
+      vertical-align: top;
+      // width: calc((100% - (40px * 2)) / 3);
+      width: 32%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    @media (min-width: 1024px) {
+      margin-left: 40px;
+      // width: calc((100% - (40px * 2)) / 3);
+      width: 294px;
+    }
+  }
+  .section-title {
+    @media (min-width: 768px) {
+      white-space: nowrap;
+    }
+  }
+}
+.location {
+  margin-bottom: 15px; //30px
+
+  p {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+.location-description {
+  @media (min-width: 320px) {
+    float: right;
+  }
+  @media (min-width: 768px) {
+    float: none;
+    margin-top: 10px;
+  }
+}
+
+
+/* Sponsors
+   ========================================================================== */
+.sponsors-wrapper {
+  @media (min-width: 640px) {
+    // font-size: 0;
+  }
+  @media (min-width: 768px) {
+    display: inline-block;
+    width: calc(((100% - (40px * 5)) / 6 * 4) + (40px * 3));
+  }
+}
+.sponsor {
+  a {
+    border-bottom: 0 none;
+    display: block;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    width: calc((100% - (20px * 3)) / 4);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-left: 40px;
+    width: calc((100% - (40px * 3)) / 4);
+
+    .full-monty & {
+      width: calc(((100% - (40px * 3)) / 4 * 2) + 40px);
+    }
+  }
+}
+.sponsor-title {
+  margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    margin-bottom: 0;
+    width: calc(((100% - (40px * 5)) / 6 * 2) + 40px);
+  }
+}
 
 /* Footer
    ========================================================================== */
-footer {
+.footer {
+  padding-bottom: 30px; //60px
   text-align: center;
+
+  @media (min-width: 768px) {
+    padding-bottom: 80px;
+  }
 }
 .twitter {
   border-bottom: 0 none;
-  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media (min-width: 300px) {
+    font-size: 18px;
+  }
+  @media (min-width: 640px) {
+    font-size: 40px;
+  }
+  @media (min-width: 768px) {
+    font-size: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .icon-social-twitter:before {
+    margin-left: -8px;
+  }
 }
 .at {
   display: none;
@@ -379,12 +850,13 @@ footer {
 
   li {
     display: inline;
+    font-size: 17px;
     margin-left: 5px;
 
     &:before {
       color: $c-orange;
       content: '\00B7';
-      font-size: 21px;
+      font-size: 1.2em;
       margin-right: 5px;
     }
     &:first-child {
@@ -394,15 +866,23 @@ footer {
         display: none;
       }
     }
-  }
-  a {
-    font-size: 21px;
+    @media (min-width: 640px) {
+      font-size: 28px;
+      margin-left: 25px;
+
+      &:before {
+        font-size: 0.8em;
+        margin-right: 25px;
+        vertical-align: text-top;
+      }
+    }
   }
 }
 #left-logic {
   background-image: url(../images/left-logic.png);
   background-position: top;
   background-size: 113px, 23px;
+  border-bottom: 0 none;
   display: block;
   height: 23px;
   margin: 0 auto;
@@ -412,6 +892,12 @@ footer {
 
   &:hover, &:focus, &:active {
     background-position: bottom;
+  }
+
+  @media (min-width: 480px) {
+    background-size: 100%;
+    height: 47px;
+    width: 226px;
   }
 }
 
