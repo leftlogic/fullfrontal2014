@@ -3,7 +3,8 @@
 hr.main-hr
 section.main(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
   h2#sessions.section-title.icon-microphone(role='heading', aria-level='2') Schedule
-  span.button.button-disabled Sold Out
+  div.button-wrapper
+    span.button.button-disabled Sold Out
   ol.sessions-wrapper
     each session in public._data.sessions.sessions
       - if (!session.start) {

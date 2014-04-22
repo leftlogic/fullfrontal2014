@@ -4,12 +4,16 @@ section.main(role='region', aria-labelledby='workshops')
     h2#workshops.section-title.icon-spanner(role='heading', aria-level='2') Workshop #{index+1}
     if config.onsale
       if config.soldout[workshop.slug]
-        a.button.button-disabled(href='/workshop/' + workshop.slug) Sold Out
+          div.button-wrapper
+            a.button.button-disabled(href='/workshop/' + workshop.slug) Sold Out
       else
-        a.button(href='/workshop/' + workshop.slug) Buy Tickets
+          div.button-wrapper
+            a.button(href='/workshop/' + workshop.slug) Buy Tickets
     else
-      a.button(href='/workshop/' + workshop.slug) Find More
-    section.sub-hr(id=workshop.slug)
+        div.button-wrapper
+          a.button(href='/workshop/' + workshop.slug) Find More
+          sub.button-sub Includes Conference Ticket
+    section.workshop-wrapper.sub-hr(id=workshop.slug)
       header
         h3.workshop-title(role='heading', aria-level='3')=workshop.title
         div

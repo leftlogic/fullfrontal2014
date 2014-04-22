@@ -46,6 +46,14 @@ a {
     text-decoration: none;
   }
 }
+p {
+  margin: 0;
+  padding: 0;
+}
+.screen {
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+}
 .section-title {
   font-size: 40px;
   font-weight: bold;
@@ -70,9 +78,11 @@ a {
 .workshop-content,
 .blurb {
   font-weight: normal;
+  line-height: 1.7;
 }
 .workshop-list {
   font-weight: 500;
+  line-height: 1.7;
   list-style: none;
   margin: 0;
   padding: 0 0 0 1.4em;
@@ -94,7 +104,7 @@ a {
   // }
   .section-title {
     font-size: 30px;
-    margin-bottom: 36px;
+    margin-bottom: 28px; // 36px
   }
   .session-title,
   .workshop-title,
@@ -116,6 +126,11 @@ a {
   @media (min-width: 640px) {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+.main {
+  @media (min-width: 768px) {
+    margin-bottom: 64px;
   }
 }
 .case {
@@ -190,10 +205,6 @@ a {
     background:     linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(51,51,51,1) 50%,rgba(0,0,0,0) 100%);
   }
 }
-.screen {
-  // font-smooth: never;
-  // -webkit-font-smoothing : none;
-}
 .screen-date {
   font-size: 13px;
   @include clearfix;
@@ -224,7 +235,8 @@ a {
 }
 .tickets-wrapper {
   &:before {
-    content: "\2014";
+    content: "-";
+    line-height: 1;
     display: block;
   }
 }
@@ -236,7 +248,7 @@ a {
   box-shadow: 0 0 5px 0 rgba($c-green-glow, .5);
   display: inline-block;
   margin: 40px auto;
-  padding: 14px 20px 20px;
+  padding: 7px 20px 22px; //14px 20px 20px
 }
 .screen-shadow {
   height: 50px;
@@ -269,14 +281,18 @@ a {
   }
   .screen-date {
     font-size: 21px;
+    margin-bottom: 70px;
+    margin-top: 32px;
   }
   .screen-button {
-    margin: 80px auto;
+    margin: 115px auto 135px;
     padding-left: 40px;
     padding-right: 40px;
   }
   .details-tickets-wrapper {
-    font-size: 48px;
+    font-size: 56px; //48px
+    line-height: 74px;
+    margin-top: 70px;
   }
   .tickets-line {
     display: block;
@@ -503,7 +519,7 @@ a {
   @media (min-width: 768px) {
     background-size: 100% 20px;
     height: 60px;
-    margin-bottom: 74px;
+    margin-bottom: 72px;
 
     &:before, &:after {
       height: 20px;
@@ -524,7 +540,7 @@ a {
     margin-bottom: 30px;
 
     @media (min-width: 768px) {
-      margin-bottom: 20px;
+      margin-bottom: 14px; // 20px
     }
   }
 }
@@ -534,16 +550,13 @@ a {
     border: 1px solid $c-orange;
     border-radius: 5px;
     box-shadow: inset -2px -2px 0 rgba($c-orange, .25);
-    display: inline-block;
+    display: block;
     font-size: 24px;
     // font-weight: bold;
     line-height: 2;
-    padding: 0 22px;
+    padding: 1px 22px;
     text-align: center;
     text-transform: uppercase;
-  }
-  @media (min-width: 768px) {
-    width: 294px;
   }
 }
 .button-disabled {
@@ -554,8 +567,27 @@ a {
     color: $c-orange-light;
   }
 }
+.button-wrapper {
+  position: relative;
+
+  @media (min-width: 768px) {
+    float: right;
+    margin-top: -8px;
+    width: 294px;
+  }
+}
+.button-sub {
+  bottom: 100%;
+  font-size: 12px;
+  font-weight: normal;
+  padding-bottom: 7px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
 
 .sessions-wrapper {
+  clear: both;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -565,7 +597,15 @@ a {
   padding-bottom: 30px;
 
   @media (min-width: 768px) {
-    padding-bottom: 20px;
+    padding-bottom: 14px; // 20px
+  }
+}
+@media (min-width: 768px) {
+  .section-title {
+    float: left;
+  }
+  .monty {
+    clear: both;
   }
 }
 
@@ -603,6 +643,7 @@ a {
   @media (min-width: 768px) {
     height: 200px;
     margin-right: 40px;
+    margin-top: 6px;
     width: 127px;
   }
 }
@@ -667,6 +708,7 @@ a {
   }
   .session-header {
     // float: left;
+    margin-top: 17px;
   }
   .session-content {
     clear: none;
@@ -675,7 +717,7 @@ a {
   }
   .session-links {
     display: table-caption;
-    margin-top: -1.65em;
+    margin-top: -32px;
     text-align: right;
 
     a {
@@ -690,8 +732,16 @@ a {
   .workshop-time {
     float: right;
   }
+  .workshop-wrapper {
+    clear: both;
+  }
   .workshop-content-wrapper {
     @include clearfix;
+    margin-bottom: 66px;
+    margin-top: 66px;
+  }
+  .workshop-title {
+    margin-top: 30px;
   }
   .workshop-content {
     float: left;
@@ -707,13 +757,20 @@ a {
    ========================================================================== */
 .locations {
   &, & ul {
+    clear: both;
     list-style: none;
     margin: 0;
     padding: 0;
   }
+  & {
+    @media (min-width: 768px) {
+      font-size: 0;
+    }
+  }
   & > li {
     @media (min-width: 768px) {
       display: inline-block;
+      font-size: 17px;
       // margin-left: 40px;
       margin-left: 2%;
       vertical-align: top;
@@ -744,7 +801,18 @@ a {
   }
 
   @media (min-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 34px; //40px
+
+    &:first-child {
+      margin-top: 36px;
+    }
+    &:last-child {
+      margin-bottom: 12px;
+    }
+
+    a {
+      line-height: 1;
+    }
   }
 }
 .location-description {
@@ -753,20 +821,30 @@ a {
   }
   @media (min-width: 768px) {
     float: none;
-    margin-top: 10px;
+    margin-top: 6px;
   }
 }
 
 
 /* Sponsors
    ========================================================================== */
+.main-sponsors {
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
 .sponsors-wrapper {
   @media (min-width: 640px) {
-    // font-size: 0;
+    font-size: 0;
   }
   @media (min-width: 768px) {
     display: inline-block;
+    margin: 26px 0;
     width: calc(((100% - (40px * 5)) / 6 * 4) + (40px * 3));
+
+    .full-monty & {
+      margin: 44px 0;
+    }
   }
 }
 .sponsor {
@@ -832,6 +910,7 @@ a {
   }
   @media (min-width: 768px) {
     font-size: 60px;
+    line-height: 46px;
   }
 }
 @media (min-width: 768px) {
@@ -847,6 +926,10 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: 768px) {
+    margin-top: 22px;
+  }
 
   li {
     display: inline;
@@ -876,6 +959,12 @@ a {
         vertical-align: text-top;
       }
     }
+  }
+}
+.blurb {
+  @media (min-width: 768px) {
+    margin-bottom: 45px;
+    margin-top: 85px;
   }
 }
 #left-logic {
