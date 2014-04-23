@@ -55,8 +55,10 @@ p {
   padding: 0;
 }
 .screen {
-  font-smooth: never;
-  -webkit-font-smoothing : none;
+  @media (min-width: 768px) {
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+  }
 }
 .section-title {
   font-size: 40px;
