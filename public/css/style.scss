@@ -176,7 +176,7 @@ p {
   }
 }
 .nav-main {
-  // display: none;
+  display: none;
   padding-top: 30px;
   margin-bottom: 50px;
   
@@ -275,6 +275,17 @@ p {
     right: -40px;
     bottom: 3px;
     box-shadow: inset 0 0 0 10px rgba(#535758, .5), 0 0 0 3px rgba($c-white, .25);
+  }
+
+  .mega & {
+    left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+
+    @media (min-width: 768px) {
+      bottom: 40px;
+    }
   }
 }
 @media (min-width: 768px) {

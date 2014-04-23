@@ -13,11 +13,9 @@
     var res = parseInt(start / imageWidth, 10);
     if (res >= 6) {
       imageWidth = imageWidth * 2.5;
-    }
-    else if (res >= 2) {
+    } else if (res >= 2) {
       imageWidth = imageWidth * 1.5;
-    }
-    else if (res <= 1) {
+    } else if (res <= 1) {
       imageWidth = imageWidth * 0.5;
     }
     var o = start % imageWidth / 2 % span;
@@ -32,4 +30,36 @@
 
   window.addEventListener('load', offset);
   window.addEventListener('resize', offset);
+})();
+
+
+// Show the black monitor full screen
+(function () {
+  var $s = document.getElementById('screen');
+
+  function mega() {
+    var originalSize = {
+      w: $s.offsetWidth,
+      h: $s.offsetHeight
+    };
+    var winSize = {
+      w : window.innerWidth,
+      h: window.innerHeight
+    };
+    if (originalSize.h <= winSize.h) {
+      // do nothing, just resize the wrapper and vertical center the content
+      $s.style.width = winSize.w + 'px';
+      $s.style.height = winSize.h + 'px';
+      $s.className += " " + 'mega';
+      $s.style.display = 'table-cell';
+      $s.style.verticalAlign = 'middle';
+    } else {
+      // $s.style.width = winSize.w + 'px';
+      // $s.style.height = winSize.h + 'px';
+      // $s.className += " " + 'mega';
+    }
+    console.log(originalSize, winSize);
+  }
+
+  window.addEventListener('load', mega);
 })();
