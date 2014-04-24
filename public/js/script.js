@@ -50,7 +50,7 @@
       // do nothing, just resize the wrapper and vertical center the content
       $s.style.width = winSize.w + 'px';
       $s.style.height = winSize.h + 'px';
-      $s.className += " " + 'mega';
+      $s.className += " " + 'js-mega';
       $s.style.display = 'table-cell';
       $s.style.verticalAlign = 'middle';
     } else {
