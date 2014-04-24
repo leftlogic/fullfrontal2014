@@ -253,7 +253,7 @@ p {
   box-shadow: 0 0 5px 0 rgba($c-green-glow, .5);
   display: inline-block;
   margin: 40px auto;
-  padding: 7px 20px 22px; //14px 20px 20px
+  padding: 0 20px 4px; //14px 20px 20px
 
   &, &:hover, &:focus, &:active {
     border: 1px solid $c-green;
@@ -306,8 +306,7 @@ p {
   }
   .screen-button {
     margin: 115px auto 135px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 7px 40px 22px;
   }
   .details-tickets-wrapper {
     font-size: 56px; //48px
