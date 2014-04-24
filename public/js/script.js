@@ -35,9 +35,18 @@
 
 // Show the black monitor full screen
 (function () {
+  var $$ = document.querySelectorAll.bind(document);
+
   var $s = document.getElementById('screen');
 
-  function mega() {
+  var $logo = $$('.logo')[0];
+  var $logoImg = $$('.logo img')[0];
+  var $screenButton = $$('.screen-button')[0];
+  var $screenInt = $$('.screen')[0];
+  
+  window.mega = function() {
+    var diffHeight = 0;
+    var propHeight = 0;
     var originalSize = {
       w: $s.offsetWidth,
       h: $s.offsetHeight
@@ -54,12 +63,34 @@
       $s.style.display = 'table-cell';
       $s.style.verticalAlign = 'middle';
     } else {
-      // $s.style.width = winSize.w + 'px';
-      // $s.style.height = winSize.h + 'px';
-      // $s.className += " " + 'mega';
+      $s.style.width = winSize.w + 'px';
+      $s.style.height = winSize.h + 'px';
+      $s.className += " " + 'js-mega';
+
+      diffHeight = (originalSize.h - winSize.h) / 2;
+      propHeight = winSize.h / originalSize.h;
+      $screenInt.style.webkitTransform = 'scale(' + propHeight + ') translateY(-' + diffHeight + 'px)';
+
+
+
+      // $logo.style.marginTop = 0;
+      // $logo.style.marginBottom = 0;
+      // $screenButton.style.marginTop = 0;
+      // $screenButton.style.marginBottom = 0;
     }
     console.log(originalSize, winSize);
-  }
+  };
+  // window.addEventListener('load', mega);
 
-  window.addEventListener('load', mega);
+  // https://github.com/typekit/webfontloader
+  WebFontConfig = {
+    custom: {
+      families: ['Proxima Nova']
+    },
+    active: function() {
+      console.log('done');
+      mega();
+    }
+  };
+
 })();
