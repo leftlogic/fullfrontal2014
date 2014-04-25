@@ -71,14 +71,14 @@
   }
   .sponsor {
     display: inline-block;
-    margin-left: 20px;
     vertical-align: middle;
   }
   .sponsor-half,
   .sponsor-small {
+    margin-left: 20px;
     width: calc((100% - 20px) / 2);
 
-    &:nth-child(odd):not(:first-child) {
+    &:nth-child(odd) {
       margin-left: 0;
     }
     &:first-child {
@@ -106,9 +106,14 @@
   }
 
   .sponsor {
+    margin-bottom: 0;
+    margin-top: 0;
     margin-left: 20px;
     width: calc((100% - (20px * 3)) / 4);
 
+    &:nth-child(odd) {
+      margin-left: 20px;
+    }
     &:first-child {
       margin-left: 0;
     }
@@ -397,6 +402,17 @@
 
     .full-monty & {
       width: calc(((100% - (40px * 3)) / 4 * 2) + 40px);
+    }
+
+    a {
+      border: 0 none;
+    }
+
+    &:nth-child(odd) {
+      margin-left: 40px;
+    }
+    &:first-child {
+      margin-left: 0;
     }
   }
   .sponsor-title {

@@ -63,13 +63,13 @@
       $s.style.display = 'table-cell';
       $s.style.verticalAlign = 'middle';
     } else {
-      $s.style.width = winSize.w + 'px';
-      $s.style.height = winSize.h + 'px';
-      $s.className += " " + 'js-mega';
+      // $s.style.width = winSize.w + 'px';
+      // $s.style.height = winSize.h + 'px';
+      // $s.className += " " + 'js-mega';
 
-      diffHeight = (originalSize.h - winSize.h) / 2;
-      propHeight = winSize.h / originalSize.h;
-      $screenInt.style.webkitTransform = 'scale(' + propHeight + ') translateY(-' + diffHeight + 'px)';
+      // diffHeight = (originalSize.h - winSize.h) / 2;
+      // propHeight = winSize.h / originalSize.h;
+      // $screenInt.style.webkitTransform = 'scale(' + propHeight + ') translateY(-' + diffHeight + 'px)';
 
 
 
@@ -88,7 +88,7 @@
       families: ['Proxima Nova']
     },
     active: function() {
-      console.log('done');
+      // console.log('done');
       // mega();
     }
   };
