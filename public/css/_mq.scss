@@ -1,0 +1,402 @@
+@include mq-min-check(300px) {
+  .case {
+    display: table;
+    height: 93px;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+  }
+  .mother,
+  .case-button-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 136px;
+  }
+  .mother {
+    margin-bottom: 0;
+    text-align: left;
+    width: auto;
+  }
+
+  .session-speaker-name {
+    clear: left;
+    float: left;
+  }
+  .session-time {
+    float: right;
+  }
+  .session-links {
+    a {
+      display: inline;
+      line-height: inherit;
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .twitter {
+    font-size: 18px;
+  }
+}
+
+
+@include mq-min-check(320px) {
+  .screen-day {
+    float: left;
+  }
+  .screen-time {
+    float: right;
+  }
+  .schedule-title {
+    float: left;
+  }
+
+  .session-speaker-img {
+    float: left;
+    margin-bottom: 20px; // 40px
+  }
+
+  .location-description {
+    float: right;
+  }
+}
+
+
+@include mq-min-check(480px) {
+  #left-logic {
+    background-size: 100%;
+    height: 47px;
+    width: 226px;
+  }
+}
+
+
+@include mq-min-check(640px) {
+  .screen,
+  .main,
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sponsors-wrapper {
+    font-size: 0;
+  }
+  .sponsor {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    width: calc((100% - (20px * 3)) / 4);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .twitter {
+    font-size: 40px;
+  }
+  .previously {
+    li {
+      font-size: 28px;
+      margin-left: 25px;
+
+      &:before {
+        font-size: 0.8em;
+        margin-right: 25px;
+        vertical-align: text-top;
+      }
+    }
+  }
+}
+
+
+@include mq-min-check(768px) {
+  .screen {
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+  }
+
+  // body {
+  //   font-size: 17px;
+  // }
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 28px; // 36px
+  }
+  .session-title,
+  .workshop-title,
+  .location .name {
+    font-size: 27px;
+  }
+
+  .main {
+    margin-bottom: 64px;
+  }
+  .case {
+    height: 133px;
+    padding: 0 20px;
+  }
+  .footer {
+    max-width: 628px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav-main {
+    display: none;
+  }
+
+  .screen-shadow {
+    .js-mega & {
+      bottom: 40px;
+    }
+  }
+
+  .screen-wrapper {
+    padding-bottom: 40px;
+
+    &:after {
+      height: 40px;
+    }
+  }
+  .screen {
+    padding-top: 20px;
+  }
+  .screen-date {
+    font-size: 21px;
+    margin-bottom: 70px;
+    margin-top: 32px;
+  }
+  .screen-button {
+    margin: 115px auto 135px;
+    padding: 7px 40px 22px;
+  }
+  .details-tickets-wrapper {
+    font-size: 56px; //48px
+    line-height: 74px;
+    margin-top: 70px;
+  }
+  .tickets-line {
+    display: block;
+  }
+  .screen-shadow {
+    &:after {
+      border-radius: 100px;
+    }
+  }
+
+  .vents {
+    box-shadow: inset 0 -60px 20px -10px rgba($c-black, .75);
+    height: 167px;
+
+    &:after {
+      background-image: url(../images/vents-big.png);
+      background-image: url(../images/case.png), url(../images/case.png), url(../images/vents-big.png);
+      height: 170px;
+    }
+    &:before {
+      box-shadow: 0 0 120px 120px $c-led-red;
+      right: 151px;
+      top: -66px;
+    }
+  }
+  .vents-on {
+    &:before {
+      box-shadow: 0 0 120px 120px $c-led-blue;
+    }
+  }
+
+  .main-hr {
+    background-size: 100% 20px;
+    height: 60px;
+    margin-bottom: 72px;
+
+    &:before, &:after {
+      height: 20px;
+    }
+
+    &:before {
+      margin-top: 19px;
+    }
+  }
+  .sub-hr {
+    &:before {
+      margin-bottom: 14px; // 20px
+    }
+  }
+
+  .button-wrapper {
+    float: right;
+    margin-top: -8px;
+    width: 294px;
+  }
+
+  .session-wrapper ,
+  .monty {
+    padding-bottom: 14px; // 20px
+  }
+  .section-title {
+    float: left;
+  }
+  .monty {
+    clear: both;
+  }
+
+  .session-speaker-img {
+    height: 200px;
+    margin-right: 40px;
+    margin-top: 6px;
+    width: 127px;
+  }
+  .session-content {
+    padding-top: 40px;
+  }
+  .session-wrapper {
+    // display: table;
+    // width: 100%;
+  }
+  .session-speaker-img-wrapper,
+  .session-about-wrapper {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .session-header {
+    // float: left;
+    margin-top: 17px;
+  }
+  .session-content {
+    clear: none;
+    display: table;
+    float: left;
+  }
+  .session-links {
+    display: table-caption;
+    margin-top: -32px;
+    text-align: right;
+
+    a {
+      margin-left: 30px;
+    }
+  }
+
+  .workshop-time {
+    float: right;
+  }
+  .workshop-wrapper {
+    clear: both;
+  }
+  .workshop-content-wrapper {
+    @include clearfix;
+    margin-bottom: 66px;
+    margin-top: 66px;
+  }
+  .workshop-title {
+    margin-top: 30px;
+  }
+  .workshop-content {
+    float: left;
+    width: 65.28%;
+  }
+  .workshop-list {
+    float: right;
+    width: 30.56%;
+  }
+
+  .locations {
+    font-size: 0;
+
+    & > li {
+      display: inline-block;
+      font-size: 17px;
+      // margin-left: 40px;
+      margin-left: 2%;
+      vertical-align: top;
+      // width: calc((100% - (40px * 2)) / 3);
+      width: 32%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .section-title {
+      white-space: nowrap;
+    }
+  }
+  .location {
+    margin-bottom: 34px; //40px
+
+    &:first-child {
+      margin-top: 36px;
+    }
+    &:last-child {
+      margin-bottom: 12px;
+    }
+
+    a {
+      line-height: 1;
+    }
+  }
+  .location-description {
+    float: none;
+    margin-top: 6px;
+  }
+
+  .main-sponsors {
+    margin-bottom: 40px;
+  }
+  .sponsors-wrapper {
+    display: inline-block;
+    margin: 26px 0;
+    width: calc(((100% - (40px * 5)) / 6 * 4) + (40px * 3));
+
+    .full-monty & {
+      margin: 44px 0;
+    }
+  }
+  .sponsor {
+    margin-left: 40px;
+    width: calc((100% - (40px * 3)) / 4);
+
+    .full-monty & {
+      width: calc(((100% - (40px * 3)) / 4 * 2) + 40px);
+    }
+  }
+  .sponsor-title {
+    display: inline-block;
+    margin-bottom: 0;
+    width: calc(((100% - (40px * 5)) / 6 * 2) + 40px);
+  }
+
+  .footer {
+    padding-bottom: 80px;
+  }
+  .twitter {
+    font-size: 60px;
+    line-height: 46px;
+  }
+  .icon-social-twitter:before {
+    margin-left: -8px;
+  }
+  .previously {
+    margin-top: 22px;
+  }
+  .blurb {
+    margin-bottom: 45px;
+    margin-top: 85px;
+  }
+}
+
+
+@include mq-min-check(1024px) {
+  .locations {
+    & > li {
+      margin-left: 40px;
+      // width: calc((100% - (40px * 2)) / 3);
+      width: 294px;
+    }
+  }
+}

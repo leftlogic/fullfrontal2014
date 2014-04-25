@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* ==|== primary styles =====================================================
+   Agency: Tizuni http://tizuni.com/
+   Author: Giulia Alfonsi giuliaa@tizuni.com
+
+   This is only for IE8 or less versions. It contains a copy of the media
+   queries section, not optimized and not cleaned to save development time
+   ========================================================================== */
+
+
+$fix-mqs: 1024px;
+$old-ie: true;
+
+@import "var";
+@import "mixin";
+
+@import "mq";
+
+.wrapper {
+  width: $fix-mqs;
+}
