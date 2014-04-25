@@ -12,6 +12,6 @@ section.main.main-sponsors(role='region', aria-labelledby='sponsors')
         h3.sponsor-title(role='heading', aria-level='3')= capitalize(key) + ' Monty Sponsors'
         div.sponsors-wrapper
           each sponsor in cat
-            section.sponsor
+            section.sponsor(class='sponsor-' + key)
               a(href=sponsor.url)
                 img(src='/images/sponsors/' + sponsor.img)

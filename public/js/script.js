@@ -89,7 +89,7 @@
     },
     active: function() {
       console.log('done');
-      mega();
+      // mega();
     }
   };
 
