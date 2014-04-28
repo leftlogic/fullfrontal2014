@@ -6,7 +6,7 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
   div.button-wrapper
     span.button.button-disabled Sold Out
   ol.sessions-wrapper
-    each session in public._data.sessions.sessions
+    each session, index in public._data.sessions.sessions
       - if (!session.start) {
       -   session.start = pad(time.getHours()) + ':' + pad(time.getMinutes())
       - }
@@ -14,7 +14,7 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
       - if (!session.end) {
       -   session.end = pad(time.getHours()) + ':' + pad(time.getMinutes())
       - }
-      li.session-wrapper.sub-hr#slug
+      li.session-wrapper.sub-hr(id='slug' + index)
         if session.break
           header.break
             h3.schedule-title(role='heading', aria-level='3')= session.title
@@ -25,8 +25,8 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
         else
           if session.speaker.photo
             div.session-speaker-img-wrapper
-              div.session-speaker-img(alt=session.speaker.alt?session.speaker.alt:null, style='background-image:url(/images/speakers/' + session.speaker.photo + ')')
-                img(src='/images/speakers/' + session.speaker.photo)
+              div.session-speaker-img(style='background-image:url(/images/speakers/' + session.speaker.photo + ')')
+                img(src='/images/speakers/' + session.speaker.photo, alt=session.speaker.alt?session.speaker.alt:'Picture of ' + session.speaker.name)
           div.session-about-wrapper
             header.session-header
               h3.session-title(role='heading', aria-level='3')= session.title
