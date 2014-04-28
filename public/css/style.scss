@@ -175,10 +175,15 @@ p {
   display: block;
 }
 .logo {
+  // since IE has problem with SVG in <img> not scaling
+  // source https://gist.github.com/larrybotha/7881691
+  // the wrapper will be the one flexible
   margin: 40px auto;
+  max-width: 306px; // this is the real size of the SVG
+  width: 50%;
+
   img {
-    max-width: 50%;
-    width: auto;
+    width: 100%;
   }
 }
 .details-tickets-wrapper {
@@ -539,6 +544,7 @@ p {
 .sponsor {
   margin-bottom: 10px;
   margin-top: 10px;
+  width: 100%; // this is for IE
   
   a {
     border-bottom: 0 none;
