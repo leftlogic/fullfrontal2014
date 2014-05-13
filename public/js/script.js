@@ -80,7 +80,7 @@
     }
     console.log(originalSize, winSize);
   };
-  // window.addEventListener('load', mega);
+  window.addEventListener('load', mega);
 
   // https://github.com/typekit/webfontloader
   WebFontConfig = {
