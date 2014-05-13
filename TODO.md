@@ -1,0 +1,22 @@
+V Test on IE
+* Test on other browser but Chrome
+* Test on iOS and retina devices
+* Implement phases (config.phase)
+	* 0: before selling any ticket
+	* 1: first batch of tickets
+	* 2: second batch of tickets
+	* 3: release of the topics
+	* 4: after conference
+* JavaScript for fullscreen of the black monitor
+* JavaScript for the movement of the circuits under the vents
+* JavaScript for the accelerometer for the above animation
+V Fix icons next to text
+V IE9: fallback for gradients? what about the switch?
+V IE8/7: SVG and calc() or maybe leave the mobile first layout
+V Fix led glow on Firefox
+* SVG vents not working on
+	* IE11
+	* iOS
+* Look at the layout of Locations section to see what happens when more/longer text
+V iOS - remove automatic creation of links for numbers in the header
+* javascript for target session
