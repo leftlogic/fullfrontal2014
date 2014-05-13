@@ -148,8 +148,10 @@ p {
 .screen-wrapper {
   padding-bottom: 20px;
   position: relative;
+  z-index: 1; // Firefox fix
   background: -webkit-radial-gradient(center, ellipse cover,  rgba(136,136,136,0.15) 60%,rgba(0,0,0,0.15) 100%);
   background:             radial-gradient(ellipse at center,  rgba(136,136,136,0.15) 60%,rgba(0,0,0,0.15) 100%);
+  background-color: $c-black; // Firefox fix
 
   &:after {
     content: "";
@@ -242,6 +244,7 @@ p {
   padding-bottom: 10px;
   padding-top: 10px;
   position: relative;
+  z-index: 1; // Firefox fix
 
   &:before, &:after {
     background: rgba(#7A7A7A, .25);
