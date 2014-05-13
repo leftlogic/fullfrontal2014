@@ -12,12 +12,8 @@ header.masthead(role='banner')
         time.screen-time(datetime='2014-11-07T09:00') 1110000100 - 11100001000
 
       h1.logo(role='heading', aria-level='1')
-        img#logo(src='images/logo.svg', alt='Full Frontal 2014')
-      script.
-        if (!supportsSVG()) {
-          var logo = document.getElementById('logo');
-          logo.src = 'images/logo.png';
-        }
+        object#logo(type='image/svg+xml', data='images/logo.svg')
+          img#logo(src='images/logo.png', alt='Full Frontal 2014')
 
       div.details-tickets-wrapper
 
