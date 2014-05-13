@@ -230,9 +230,11 @@
     height: 167px;
 
     &:after {
+      background-image: url(../images/case.png), url(../images/case.png), url(../images/vents-big.svg);
+      height: 167px; // 170px
+    }
+    .no-svg &:after {
       background-image: url(../images/vents-big.png);
-      background-image: url(../images/case.png), url(../images/case.png), url(../images/vents-big.png);
-      height: 170px;
     }
     &:before {
       box-shadow: 0 0 120px 120px $c-led-red;
