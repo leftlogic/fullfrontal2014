@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/* ==|== primary styles =====================================================
-   Agency: Tizuni http://tizuni.com/
-   Author: Giulia Alfonsi giuliaa@tizuni.com
-
-   This is only for IE8 or less versions. It contains a copy of the media
-   queries section, not optimized and not cleaned to save development time
-   ========================================================================== */
 
 
 $fix-mqs: 1024px;
@@ -16,6 +9,25 @@ $old-ie: true;
 
 // @import "mq";
 
-// .wrapper {
-//   width: $fix-mqs;
-// }
+.case-button-wrapper {
+  display: none;
+}
+#left-logic {
+  height: 47px;
+  width: 226px;
+}
+
+// IE7
+*:first-child+html {
+  .machine {
+    display: none;
+  }
+  .button-wrapper {
+    position: static;
+  }
+  .button-sub {
+    position: static;
+    display: block;
+    text-align: center;
+  }
+}

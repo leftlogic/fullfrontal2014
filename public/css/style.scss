@@ -194,6 +194,7 @@ p {
     content: "-";
     line-height: 1;
     display: block;
+    text-align: center; // old IE fix
   }
 }
 .tickets-lines {
@@ -303,6 +304,7 @@ p {
   margin-bottom: 10px;
 
   &:before {
+    color: lighten($c-black, 60);
     color: rgba($c-black, .25);
     content: "MU/TH/UR 6000";
     display: block;
