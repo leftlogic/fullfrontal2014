@@ -40,6 +40,10 @@
   .twitter {
     font-size: 22px; // 18px
   }
+  .icon-social-twitter:before {
+    position: relative;
+    top: 2px;
+  }
   .previously {
     margin-top: 10px;
   }
@@ -122,6 +126,9 @@
   .twitter {
     font-size: 40px;
   }
+  .icon-social-twitter:before {
+    top: 4px;
+  }
   .previously {
     li {
       font-size: 28px;
@@ -149,6 +156,11 @@
   .section-title {
     font-size: 30px;
     margin-bottom: 28px; // 36px
+
+    &[class^="icon-"]:before,
+    &[class*=" icon-"]:before {
+      top: 2px;
+    }
   }
   .session-title,
   .workshop-title,
@@ -432,6 +444,7 @@
   }
   .icon-social-twitter:before {
     margin-left: -8px;
+    top: 6px;
   }
   .previously {
     margin-top: 22px;

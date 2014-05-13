@@ -50,6 +50,13 @@ p {
   line-height: 1;
   margin: 0 0 30px;
   text-transform: uppercase;
+
+  &[class^="icon-"]:before,
+  &[class*=" icon-"]:before {
+    margin-right: 0.25em;
+    position: relative;
+    top: 3px;
+  }
 }
 .schedule-title,
 .sponsor-title {
