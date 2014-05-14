@@ -7,68 +7,69 @@ header.masthead(role='banner')
   //- p#show-menu Pull down for navigation...
   div#screen.screen-wrapper
     div.screen
-      div.screen-date
-        time.screen-day(datetime='2014-11-07T09:00') 111 1011 11111011110
-        time.screen-time(datetime='2014-11-07T09:00') 1110000100 - 11100001000
+      object#giulia(type='image/svg+xml', data='images/header.svg')
+        div.screen-date
+          time.screen-day(datetime='2014-11-07T09:00') 111 1011 11111011110
+          time.screen-time(datetime='2014-11-07T09:00') 1110000100 - 11100001000
 
-      h1.logo(role='heading', aria-level='1')
-        object#logo(type='image/svg+xml', data='images/logo.svg')
+        h1.logo(role='heading', aria-level='1')
+          //- object#logo(type='image/svg+xml', data='images/logo.svg')
           img#logo(src='images/logo.png', alt='Full Frontal 2014')
 
-      div.details-tickets-wrapper
+        div.details-tickets-wrapper
 
-        div.details-wrapper
-          time.dtstart(title='2014-11-07T09:00', datetime='2014-11-07T09:00') 7 November 2014
-          = "\n"
-          span.
-          span.location Brighton UK.
-
-        - var line = 'Tickets will be sold on the\n9th July and 16th July.'
-        - var button = 'More Info'
-        - var buy = true
-        - var classes = ['screen-button']
-        if config.onsale
-          if config.phase == 1
-            if config.soldout.conference
-              if config.soldout.workshops
-                - line = 'Tickets for this phase sold out.\nMore go on sale 16th July.'
-                - button = 'Sold Out'
-                - buy = false
-              else
-                - line = 'Last few tickets for this batch.\nMore go on sale 16 July.'
-                - button = 'Buy Tickets'
-                - buy = true
-            else
-              - line = 'Tickets available to buy.\nMore go on sale 16th July.'
-              - button = 'Buy Tickets £150 <abbr title="plus Value Added Tax">+ VAT</abbr>'
-              - buy = true
-          if config.phase == 2
-            if config.soldout.conference
-              if config.soldout.workshops
-                - line = 'All tickets for this years\nconference have been sold.'
-                - button = 'Sold Out'
-                - buy = false
-              else
-                - line = 'Tickets available to buy.\nLast few remaining.'
-                - button = 'Buy Tickets'
-                - buy = true
-            else
-              - line = 'Tickets available to buy.\nLast bach.'
-              - button = 'Buy Tickets £150 <abbr title="plus Value Added Tax">+ VAT</abbr>'
-              - buy = true
-
-        - line = line.split('\n')
-
-        div.tickets-wrapper
-          p.tickets-lines
-            span.tickets-line= line[0]
+          div.details-wrapper
+            time.dtstart(title='2014-11-07T09:00', datetime='2014-11-07T09:00') 7 November 2014
             = "\n"
-            span.tickets-line= line[1]
-            = "\n"
-          if buy
-            a(href='http://leftlogic.stagehq.com', class=classes)!=button
-          else
-            span(class=classes)=button
+            span.
+            span.location Brighton UK.
+
+          - var line = 'Tickets will be sold on the\n9th July and 16th July.'
+          - var button = 'More Info'
+          - var buy = true
+          - var classes = ['screen-button']
+          if config.onsale
+            if config.phase == 1
+              if config.soldout.conference
+                if config.soldout.workshops
+                  - line = 'Tickets for this phase sold out.\nMore go on sale 16th July.'
+                  - button = 'Sold Out'
+                  - buy = false
+                else
+                  - line = 'Last few tickets for this batch.\nMore go on sale 16 July.'
+                  - button = 'Buy Tickets'
+                  - buy = true
+              else
+                - line = 'Tickets available to buy.\nMore go on sale 16th July.'
+                - button = 'Buy Tickets £150 <abbr title="plus Value Added Tax">+ VAT</abbr>'
+                - buy = true
+            if config.phase == 2
+              if config.soldout.conference
+                if config.soldout.workshops
+                  - line = 'All tickets for this years\nconference have been sold.'
+                  - button = 'Sold Out'
+                  - buy = false
+                else
+                  - line = 'Tickets available to buy.\nLast few remaining.'
+                  - button = 'Buy Tickets'
+                  - buy = true
+              else
+                - line = 'Tickets available to buy.\nLast bach.'
+                - button = 'Buy Tickets £150 <abbr title="plus Value Added Tax">+ VAT</abbr>'
+                - buy = true
+
+          - line = line.split('\n')
+
+          div.tickets-wrapper
+            p.tickets-lines
+              span.tickets-line= line[0]
+              = "\n"
+              span.tickets-line= line[1]
+              = "\n"
+            if buy
+              a(href='http://leftlogic.stagehq.com', class=classes)!=button
+            else
+              span(class=classes)=button
     div.screen-shadow
 
   div.machine
