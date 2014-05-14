@@ -37,7 +37,6 @@
 (function () {
   if (supportsSVG()) {
     var $s = document.getElementById('screen');
-    var $g = document.getElementById('giulia');
 
     window.mega = function() {
       var winSize = {
@@ -46,13 +45,6 @@
       };
       $s.style.height = winSize.h + 'px';
       $s.className += " " + 'js-mega';
-      $g.style.height = '100%';
-
-      if (winSize.w < winSize.h) {
-        $g.style.width = '100%';
-      } else {
-        $g.style.width = 'auto';
-      }
     };
     mega();
   }
