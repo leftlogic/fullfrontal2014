@@ -39,10 +39,10 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
                 =' ' + session.end
             div.session-content
               if session.description
-                :markdown= session.description
+                !=marked(session.description)
               if session.bio
                 div.session-bio
-                  include:markdown= session.bio
+                  !=marked(session.bio)
               if session.slides || session.audio || session.video
                 div.session-links
                   if session.slides
