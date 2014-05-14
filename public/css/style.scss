@@ -133,7 +133,8 @@ p {
       color: $c-green;
     }
     &:hover, &:focus, &:active {
-
+      color: $c-black;
+      text-shadow: 0 0 10px $c-black;
     }
   }
 }
@@ -209,12 +210,14 @@ p {
   margin: 0;
 }
 .screen-button {
+  border: 1px solid $c-green;
   box-shadow: 0 0 5px 0 rgba($c-green-glow, .5);
   display: inline-block;
   margin: 40px auto;
   padding: 0 20px 4px; //14px 20px 20px
 
-  &, &:hover, &:focus, &:active {
+  &:hover, &:focus, &:active {
+    background: $c-green;
     border: 1px solid $c-green;
   }
 }
@@ -449,6 +452,12 @@ p {
     padding: 1px 22px;
     text-align: center;
     text-transform: uppercase;
+  }
+  &:hover, &:focus, &:active {
+    background: $c-white;
+    border-color: $c-grey-dark;
+    box-shadow: inset -2px -2px 0 rgba(#c7c7c7, .25);
+    color: $c-grey-dark;
   }
 }
 .button-disabled {

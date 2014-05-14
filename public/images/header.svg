@@ -29,6 +29,15 @@
 .button {
   stroke: #56d67e;
   filter: url(#glow);
+  fill-opacity: 0;
+}
+.anchor:hover .button {
+  fill: #56d67e;
+  fill-opacity: 1;
+}
+.anchor:hover .link {
+  fill: #000;
+  filter: none;
 }
 #ff14_logo_shape_pattern { fill: url(#stripe); }
 
@@ -78,8 +87,8 @@
 <text x="50%" y="55%" class="cern">_</text>
 <text x="50%" y="65%" class="cern">Tickets will be sold on the</text>
 <text x="50%" y="75%" class="cern">9th July and 16th July.</text>
-<a xmlns="http://www.w3.org/2000/svg" id="anchor" xlink:href="http://google.com" xmlns:xlink="http://www.w3.org/1999/xlink" target="_top">
-    <rect x="30%" y="82%" class="button" width="40%" height="10%" fill-opacity="0"/>
+<a xmlns="http://www.w3.org/2000/svg" class="anchor" xlink:href="http://google.com" xmlns:xlink="http://www.w3.org/1999/xlink" target="_top">
+    <rect x="30%" y="82%" class="button" width="40%" height="10%"/>
     <text x="50%" y="90%" class="cern link">More Info</text>
   </a>
 </svg>
