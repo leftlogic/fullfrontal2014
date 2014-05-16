@@ -4,7 +4,10 @@ hr.main-hr
 section.main(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
   h2#sessions.section-title.icon-microphone(role='heading', aria-level='2') Schedule
   div.button-wrapper
-    span.button.button-disabled Sold Out
+    if config.soldout.conference
+      span.button.button-disabled Sold Out
+    else
+      a.button(href='#') Buy Tickets
   ol.sessions-wrapper
     each session, index in public._data.sessions.sessions
       - if (!session.start) {
@@ -14,40 +17,43 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
       - if (!session.end) {
       -   session.end = pad(time.getHours()) + ':' + pad(time.getMinutes())
       - }
-      li.session-wrapper.sub-hr(id='slug' + index)
-        if session.break
-          header.break
-            h3.schedule-title(role='heading', aria-level='3')= session.title
-            div.session-time
-              =session.start + ' '
-              &mdash;
-              =' ' + session.end
-        else
-          if session.speaker.photo
-            div.session-speaker-img-wrapper
-              div.session-speaker-img(style='background-image:url(/images/speakers/' + session.speaker.photo + ')')
-                img(src='/images/speakers/' + session.speaker.photo, alt=session.speaker.alt?session.speaker.alt:'Picture of ' + session.speaker.name)
-          div.session-about-wrapper
-            header.session-header
-              h3.session-title(role='heading', aria-level='3')= session.title
-              if session.speaker.name
-                div.session-speaker-name
-                  a(href='#')= session.speaker.name
-              div.session-time.session-speaker-time
-                =session.start + ' '
-                &mdash;
-                =' ' + session.end
-            div.session-content
-              if session.description
-                !=marked(session.description)
-              if session.bio
-                div.session-bio
-                  !=marked(session.bio)
-              if session.slides || session.audio || session.video
-                div.session-links
-                  if session.slides
-                    a.icon-document-text(href=session.slides) Slides
-                  if session.audio
-                    a.icon-notes(href=session.audio) Audio
-                  if session.video
-                    a.icon-video(href=session.video) Video
+      if (session.break && config.phase < 4) || !session.break
+        li.session-wrapper.sub-hr(id='slug' + index)
+          if session.break
+              header.break
+                h3.schedule-title(role='heading', aria-level='3')= session.title
+                div.session-time
+                  =session.start + ' '
+                  &mdash;
+                  =' ' + session.end
+          else
+            if session.speaker.photo
+              div.session-speaker-img-wrapper
+                div.session-speaker-img(style='background-image:url(/images/speakers/' + session.speaker.photo + ')')
+                  img(src='/images/speakers/' + session.speaker.photo, alt=session.speaker.alt?session.speaker.alt:'Picture of ' + session.speaker.name)
+            div.session-about-wrapper
+              header.session-header
+                h3.session-title(role='heading', aria-level='3')= session.title
+                if session.speaker.name
+                  div.session-speaker-name
+                    a(href='#')= session.speaker.name
+                if config.phase < 4
+                  div.session-time.session-speaker-time
+                    =session.start + ' '
+                    &mdash;
+                    =' ' + session.end
+              div.session-content
+                if session.description
+                  !=marked(session.description)
+                if session.bio
+                  div.session-bio
+                    !=marked(session.bio)
+                if config.phase == 4
+                  if session.slides || session.audio || session.video
+                    div.session-links
+                      if session.slides
+                        a.icon-document-text(href=session.slides) Slides
+                      if session.audio
+                        a.icon-notes(href=session.audio) Audio
+                      if session.video
+                        a.icon-video(href=session.video) Video

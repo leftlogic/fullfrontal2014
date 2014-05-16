@@ -79,12 +79,16 @@ svg(viewbox='0 0 700 700', version='1.1', xmlns='http://www.w3.org/2000/svg', xm
         use(fill-rule='evenodd', xlink:href='#f')
         use(fill-rule='evenodd', xlink:href='#f', transform='translate(80, 0)')
 
-  text.cern.date(x='0', y='5%') 111 1011 11111011110
-  text.cern.date.screen-time(x='100%', y='5%') 1110000100 - 11100001000
-  text.cern(x='50%', y='50%') 7 November 2014 Brighton UK.
+  text.cern.date(x='0', y='5%')= text.binary1
+  text.cern.date.screen-time(x='100%', y='5%')= text.binary2
+  text.cern(x='50%', y='50%')= text.date + ' ' + text.location
   text.cern(x='50%', y='55%') _
-  text.cern(x='50%', y='65%') Tickets will be sold on the
-  text.cern(x='50%', y='75%') 9th July and 16th July.
-  a.anchor(xmlns='http://www.w3.org/2000/svg', xlink:href='http://google.com', xmlns:xlink='http://www.w3.org/1999/xlink', target='_top')
+  text.cern(x='50%', y='65%')= line[0]
+  text.cern(x='50%', y='75%')= line[1]
+  if buy
+    a.anchor(xlink:href='http://leftlogic.stagehq.com', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', target='_top')
+      rect.button(x='30%', y='82%', width='40%', height='10%')
+      text.cern.link(x='50%', y='90%')!= button
+  else
     rect.button(x='30%', y='82%', width='40%', height='10%')
-    text.cern.link(x='50%', y='90%') More Info
+    text.cern.link(x='50%', y='90%')= button
