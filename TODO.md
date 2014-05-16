@@ -1,13 +1,18 @@
 * ~~Test on IE~~
 * ~~Test on other browser but Chrome~~
 * ~~Test on iOS and retina devices~~
-* Implement phases (config.phase)
-	* 0: before selling any ticket
-	* 1: first batch of tickets
-	* 2: second batch of tickets
-	* 3: release of the topics
-	* 4: after conference
-* JavaScript for fullscreen of the black monitor
+* ~~Implement phases (config.phase)~~
+	* ~~0: before selling any ticket~~
+	* ~~1: first batch of tickets~~
+	* ~~2: second batch of tickets~~
+	* ~~3: release of the topics~~
+	* ~~4: after conference~~
+* ~~JavaScript for fullscreen of the black monitor~~
+* SVG for fullscreen of the black monitor
+	* style fo fallback (vertical align middle)
+	* background for main menu (it's missing the gradient)
+	* button rect width flexible to content
+	* change font for longer text
 * JavaScript for the movement of the circuits under the vents
 * JavaScript for the accelerometer for the above animation
 * ~~Fix icons next to text~~
@@ -21,3 +26,4 @@
 * ~~iOS - remove automatic creation of links for numbers in the header~~
 * javascript for target session
 * ~~Need high res image for Left Logic logo for Chris~~
+* Left Logic logo svg and png
