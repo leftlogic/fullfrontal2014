@@ -24,6 +24,6 @@
 	* iOS
 * Look at the layout of Locations section to see what happens when more/longer text
 * ~~iOS - remove automatic creation of links for numbers in the header~~
-* javascript for target session
+* ~~javascript for target session~~
 * ~~Need high res image for Left Logic logo for Chris~~
 * Left Logic logo svg and png
