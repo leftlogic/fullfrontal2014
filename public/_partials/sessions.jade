@@ -2,7 +2,7 @@
 
 hr.main-hr
 section.main(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
-  h2#sessions.section-title.icon-microphone(role='heading', aria-level='2') Schedule
+  h2#sessions.section-title.icon-microphone(role='heading', aria-level='2') Sessions
   div.button-wrapper
     if config.soldout.conference
       span.button.button-disabled Sold Out
@@ -17,7 +17,7 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
       - if (!session.end) {
       -   session.end = pad(time.getHours()) + ':' + pad(time.getMinutes())
       - }
-      if (session.break && config.phase < 4) || !session.break
+      if (session.break && config.phase == 3) || !session.break
         li.session-wrapper.sub-hr(id='slug' + index)
           if session.break
               header.break
@@ -27,17 +27,17 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
                   &mdash;
                   =' ' + session.end
           else
-            if session.speaker.photo
+            if config.phase >= 3 && session.speaker.photo
               div.session-speaker-img-wrapper
                 div.session-speaker-img(style='background-image:url(/images/speakers/' + session.speaker.photo + ')')
                   img(src='/images/speakers/' + session.speaker.photo, alt=session.speaker.alt?session.speaker.alt:'Picture of ' + session.speaker.name)
             div.session-about-wrapper
               header.session-header
                 h3.session-title(role='heading', aria-level='3')= session.title
-                if session.speaker.name
+                if config.phase >= 3 && session.speaker.name
                   div.session-speaker-name
                     a(href='#')= session.speaker.name
-                if config.phase < 4
+                if config.phase == 3
                   div.session-time.session-speaker-time
                     =session.start + ' '
                     &mdash;
@@ -45,7 +45,7 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
               div.session-content
                 if session.description
                   !=marked(session.description)
-                if session.bio
+                if config.phase >= 3 && session.bio
                   div.session-bio
                     !=marked(session.bio)
                 if config.phase == 4

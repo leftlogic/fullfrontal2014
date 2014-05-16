@@ -52,13 +52,14 @@ html#fullfrontal-2014
 
     include _partials/header
 
-    if config.phase >= 3
+    if config.phase >= 1
       include _partials/sessions
 
     if config.phase >= 1
       include _partials/workshops
 
-    include _partials/locations
+    if config.phase >= 1
+      include _partials/locations
 
     include _partials/sponsors
 

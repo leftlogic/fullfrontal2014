@@ -53,7 +53,7 @@ if config.phase == 4
 
 
 header.masthead(role='banner')
-  if config.phase == 3
+  if config.phase >= 1
     nav.nav-main(role='navigation')
       each item in menu
         a(href='#' + item)=capitalize(item)
