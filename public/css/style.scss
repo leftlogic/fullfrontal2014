@@ -8,9 +8,35 @@ $old-ie: false;
 
 @include font-face('cern', '../fonts/cern-terminal');
 
-@include font-face('Proxima Nova', '../fonts/proximanova/mark_simonson_-_proxima_nova_regular-webfont', normal);
-@include font-face('Proxima Nova', '../fonts/proximanova/mark_simonson_-_proxima_nova_semibold-webfont', 500);
-@include font-face('Proxima Nova', '../fonts/proximanova/mark_simonson_-_proxima_nova_bold-webfont', bold);
+/**
+ * @license
+ * MyFonts Webfont Build ID 2812773, 2014-05-15T19:20:06-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Proxima Nova SemiBold by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/semibold/
+ * 
+ * Webfont: Proxima Nova Regular by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+ * 
+ * Webfont: Proxima Nova Bold by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2812773
+ * Licensed pageviews: 1,000,000
+ * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * 
+ * © 2014 MyFonts Inc
+*/
+@include font-face('Proxima Nova', '../fonts/proximanova/proximanova_regular', normal);
+@include font-face('Proxima Nova', '../fonts/proximanova/proximanova_semibold', 500);
+@include font-face('Proxima Nova', '../fonts/proximanova/proximanova_bold', bold);
 
 *, *:after, *:before { 
   @include box-sizing(border-box);
