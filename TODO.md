@@ -12,7 +12,7 @@
 	* style fo fallback (vertical align middle)
 	* background for main menu (it's missing the gradient)
 	* button rect width flexible to content
-	* change font for longer text
+	* ~~change font for longer text~~
 * ~~JavaScript for the movement of the circuits under the vents~~
 * Better calc for the movement of the circuits
 * JavaScript for the accelerometer for the above animation
@@ -22,7 +22,7 @@
 * ~~Fix led glow on Firefox~~
 * SVG vents not working on
 	* IE11
-	* iOS -> needs a static server
+	* ~~iOS~~ -> needs a static server
 	* to test on real devices
 * Look at the layout of Locations section to see what happens when more/longer text
 * ~~iOS - remove automatic creation of links for numbers in the header~~
