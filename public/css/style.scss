@@ -666,19 +666,22 @@ p {
   margin-top: 20px;
 }
 #left-logic {
-  background-image: url(../images/left-logic.png);
-  background-position: top;
-  background-size: 113px, 23px;
   border-bottom: 0 none;
   display: block;
   height: 23px;
   margin: 0 auto;
-  overflow: hidden;
-  text-indent: -200%;
   width: 113px;
 
-  &:hover, &:focus, &:active {
-    background-position: bottom;
+  .no-svg & {
+    background-image: url(../images/left-logic.png);
+    background-position: top;
+    background-size: 113px, 23px;
+    overflow: hidden;
+    text-indent: -200%;
+
+    &:hover, &:focus, &:active {
+      background-position: bottom;
+    }
   }
 }
 
