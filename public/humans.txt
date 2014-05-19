@@ -9,7 +9,7 @@ Design by Chris Mahon - @chrismahon
 
 /* SITE */
 
-Handcrafted JavaScript, HTML5 and CSS3
+Handcrafted JavaScript, HTML5, SVG and CSS3
 
 Built on Node.js, Harp, Jade and SASS
 
