@@ -45,10 +45,10 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
                     =' ' + session.end
               div.session-content
                 if session.description
-                  !=marked(session.description)
+                  //- !=marked(session.description)
                 if config.phase >= 3 && session.bio
                   div.session-bio
-                    !=marked(session.bio)
+                    //- !=marked(session.bio)
                 if config.phase == 4
                   if session.slides || session.audio || session.video
                     div.session-links
