@@ -22,6 +22,7 @@
 * SVG vents not working on
 	* IE11
 	* iOS
+	* to test on real devices
 * Look at the layout of Locations section to see what happens when more/longer text
 * ~~iOS - remove automatic creation of links for numbers in the header~~
 * ~~javascript for target session~~
