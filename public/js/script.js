@@ -93,3 +93,24 @@
     }, 750);
   }
 })();
+
+
+// Parallax for circuit/vent
+(function() {
+  var speed = 0.2;
+  var $machine = document.getElementById('machine');
+  var $vents = document.getElementById('vents');
+  var $vents2 = document.createElement('div');
+  $vents2.id = 'vents2';
+  $machine.className += ' js-vents';
+  $vents.parentNode.insertBefore($vents2, $vents.previousSibling);
+
+  function scrollCircuit() {
+    var scrolled = document.body.scrollTop;
+    console.log('scrolling ' + scrolled);
+    $vents2.style.webkitTransform = 'translate3d(0, ' + (scrolled * speed) + 'px, 0)';
+  }
+
+  window.addEventListener('touchmove', scrollCircuit);
+  window.addEventListener('scroll', scrollCircuit);
+})();

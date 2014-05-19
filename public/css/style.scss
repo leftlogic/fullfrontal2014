@@ -351,6 +351,24 @@ p {
     box-shadow: 0 0 90px 90px $c-led-blue;
   }
 }
+#vents2 {
+  $padding: -100px;
+  background: $c-black url(../images/circuit.png);
+  bottom: $padding;
+  left: $padding;
+  position: absolute;
+  right: $padding;
+  top: 0;
+}
+.js-vents {
+  &.machine {
+    position: relative;
+    overflow: hidden;
+  }
+  .vents {
+    background: transparent;
+  }
+}
 .mother {
   margin-bottom: 10px;
 
