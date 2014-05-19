@@ -83,7 +83,7 @@ svg(viewbox='0 0 700 700', width="100%", height="100%", version='1.1', xmlns='ht
   text.cern.date.screen-time(x='100%', y='5%')= text.binary2
   text.cern(x='50%', y='50%')= text.date + ' ' + text.location
   text.cern(x='50%', y='55%') _
-  text.cern(x='50%', y='65%')= line[0]
+  text.cern(x='50%', y='65%', textLength='700', lengthAdjust='spacing')= line[0]
   text.cern(x='50%', y='75%')= line[1]
   if buy
     a.anchor(xlink:href='http://leftlogic.stagehq.com', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', target='_top')
