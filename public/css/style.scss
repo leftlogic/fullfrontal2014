@@ -217,15 +217,18 @@ p {
   display: block;
 }
 .logo {
-  // since IE has problem with SVG in <img> not scaling
-  // source https://gist.github.com/larrybotha/7881691
-  // the wrapper will be the one flexible
   margin: 40px auto;
-  max-width: 306px; // this is the real size of the SVG
+  max-width: 306px;
   width: 50%;
 
-  img, object {
-    width: 100%;
+  span {
+    background-image: url(../images/logo.png);
+    background-size: 100% 100%;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 100% 0 0;
+    text-indent: -200%;
   }
 }
 .details-tickets-wrapper {
