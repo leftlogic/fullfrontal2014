@@ -9,10 +9,11 @@
 	* ~~4: after conference~~
 * ~~JavaScript for fullscreen of the black monitor~~
 * SVG for fullscreen of the black monitor
-	* style fo fallback (vertical align middle)
-	* background for main menu (it's missing the gradient)
-	* button rect width flexible to content
+	* ~~style for fallback (vertical align middle)~~
+	* ~~background for main menu (it's missing the gradient)~~
+	* ~~button rect width flexible to content~~
 	* ~~change font for longer text~~
+	* ~~top text to be at the very top~~
 * ~~JavaScript for the movement of the circuits under the vents~~
 * Better calc for the movement of the circuits
 * JavaScript for the accelerometer for the above animation
