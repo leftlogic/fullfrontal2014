@@ -10,6 +10,7 @@
 - var button = 'More Info'
 - var buy = true
 - var on = false
+- var size = 40
 
 if config.phase == 1
   if config.soldout.conference
@@ -27,6 +28,7 @@ if config.phase == 1
     - button = 'Buy Tickets £150 <abbr title="plus Value Added Tax">+ VAT</abbr>'
     - buy = true
     - on = true
+    - size = 80
 if config.phase >= 2 && config.phase < 4
   if config.soldout.conference
     if config.soldout.workshops
@@ -43,6 +45,7 @@ if config.phase >= 2 && config.phase < 4
     - button = 'Buy Tickets £150 <abbr title="plus Value Added Tax">+ VAT</abbr>'
     - buy = true
     - on = true
+    - size = 80
 if config.phase == 4
     - line = ''
     - button = 'Watch Now'

@@ -37,10 +37,11 @@ svg(viewbox='0 0 700 700', width="100%", height="100%", version='1.1', xmlns='ht
   - button_svg = button_svg.replace('<abbr ', '<tspan>')
   - button_svg = button_svg.replace('title="', '<title>')
   - button_svg = button_svg.replace('">', '</title>')
+  - var space = (100 - size) / 2
   if buy
     a.anchor(xlink:href='http://leftlogic.stagehq.com', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', target='_top')
-      rect.button(x='30%', y='82%', width='40%', height='10%')
+      rect.button(x=space+'%', y='82%', width=size+'%', height='10%')
       text.cern.link(x='50%', y='90%')!= button_svg
   else
-    rect.button(x='30%', y='82%', width='40%', height='10%')
+    rect.button(x=space+'%', y='82%', width=size+'%', height='10%')
     text.cern.link(x='50%', y='90%')= button_svg
