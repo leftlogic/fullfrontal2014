@@ -30,3 +30,4 @@
 * ~~javascript for target session~~
 * ~~Need high res image for Left Logic logo for Chris~~
 * Left Logic logo svg and png
+* Check compression of images
