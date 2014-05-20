@@ -8,7 +8,7 @@
 	* ~~3: release of the topics~~
 	* ~~4: after conference~~
 * ~~JavaScript for fullscreen of the black monitor~~
-* SVG for fullscreen of the black monitor
+* ~~SVG for fullscreen of the black monitor~~
 	* ~~style for fallback (vertical align middle)~~
 	* ~~background for main menu (it's missing the gradient)~~
 	* ~~button rect width flexible to content~~
