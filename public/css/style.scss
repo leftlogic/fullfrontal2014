@@ -202,8 +202,12 @@ p {
   display: none;
 
   .no-svg & {
-    display: block;
+    display: table-cell;
+    vertical-align: middle;
   }
+}
+.no-svg .screen {
+  display: table;
 }
 .screen-date {
   font-size: 13px;
