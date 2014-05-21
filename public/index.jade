@@ -1,6 +1,3 @@
-- function repeat(str, num) { return new Array( num + 1 ).join( str ); }
-prefix = repeat('.', current.path.length)
-
 doctype
 html#fullfrontal-2014
   head
@@ -23,7 +20,6 @@ html#fullfrontal-2014
     script(src='/js/html5shiv.min.js')
     link(rel='stylesheet', href='/css/ltie9.css')
     <![endif]-->
-    != partial(prefix + '/js/markdown')
 
     if environment == "production"
       script.
@@ -48,7 +44,8 @@ html#fullfrontal-2014
 
   body
 
-    include _partials/scripts
+    include js/formatting
+    include js/markdown
 
     include _partials/header
 
