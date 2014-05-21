@@ -24,44 +24,19 @@ svg:hover #logic {
 svg:hover #rectangle_shade {
   fill: #F24D00;
 }
-svg:hover #symbol {
-  filter: url(#filter-border);
-}
-@media (max-width: 113px) {
-  svg:hover #symbol {
-    filter: url(#filter-border-small);
-  }
+svg:hover #square_big {
+  fill: #FFF1DA;
 }
 svg:hover #rectangle {
-  filter: url(#filter-white);
+  filter: url(#filter-over);
 }
 </style>
 <defs>
-  <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-border">
+  <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-over">
     <feMorphology radius="1" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
     <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
     <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-    <feColorMatrix values="0 0 0 0 0.964705882   0 0 0 0 0.525490196   0 0 0 0 0.17254902  0 0 0 1 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
-    <feMerge>
-      <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-      <feMergeNode in="SourceGraphic"></feMergeNode>
-    </feMerge>
-  </filter>
-  <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-border-small">
-    <feMorphology radius="2" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
-    <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-    <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-    <feColorMatrix values="0 0 0 0 0.964705882   0 0 0 0 0.525490196   0 0 0 0 0.17254902  0 0 0 1 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
-    <feMerge>
-      <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-      <feMergeNode in="SourceGraphic"></feMergeNode>
-    </feMerge>
-  </filter>
-  <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-white">
-    <feMorphology radius="1" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
-    <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-    <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-    <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+    <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.301960784   0 0 0 0 0  0 0 0 0.22 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
     <feMerge>
       <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
       <feMergeNode in="SourceGraphic"></feMergeNode>
