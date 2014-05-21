@@ -81,6 +81,7 @@
     }
   };
 
+  var $nav = $('.nav-main');
   var today = new Date();
   var confDay = new Date('2014-05-16');
   var best = null;
@@ -108,9 +109,9 @@
     }, 750);
   } else {
     // only scroll the front page
-    // location.pathname === '/' && /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-    //   if (!pageYOffset) window.scrollTo(0, 290);
-    // }, 750);
+    $nav.length > 0 && location.pathname === '/' && /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+      if (!pageYOffset) window.scrollTo(0, $nav[0].offsetHeight);
+    }, 750);
   }
 })();
 
