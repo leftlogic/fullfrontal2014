@@ -7,7 +7,7 @@ section.main(role='region', aria-labelledby='locations')
         ul.sub-hr
           each location in locations.location
             li.vcard.location
-              a.name.url.org.fn(href=location.url)=location.name
+              a.name.url.org.fn(href=location.url, target='_blank')=location.name
               div.location-description
                 p.detail=location.detail
                 if location.extra-discount
