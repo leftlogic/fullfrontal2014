@@ -159,6 +159,7 @@
   .section-title {
     font-size: 30px;
     margin-bottom: 28px; // 36px
+    padding-top: 36px;
 
     &[class^="icon-"]:before,
     &[class*=" icon-"]:before {
@@ -269,7 +270,7 @@
   .main-hr {
     background-size: 100% 20px;
     height: 60px;
-    margin-bottom: 72px;
+    margin-bottom: 36px;
 
     &:before, &:after {
       height: 20px;
@@ -288,7 +289,7 @@
   .button-wrapper {
     float: right;
     margin-bottom: 0;
-    margin-top: -8px;
+    margin-top: 28px;
     width: 294px;
   }
 

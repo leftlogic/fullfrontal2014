@@ -75,6 +75,7 @@ p {
   font-weight: bold;
   line-height: 1;
   margin: 0 0 30px;
+  padding-top: 22px;
   text-transform: uppercase;
 
   &[class^="icon-"]:before,
@@ -488,7 +489,7 @@ p {
   & {
     background-size: 100% 10px;
     height: 30px;
-    margin-bottom: 44px;
+    margin-bottom: 22px;
   }
   &:before {
     margin-top: 9px;
