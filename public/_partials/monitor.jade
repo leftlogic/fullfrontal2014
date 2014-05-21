@@ -15,7 +15,7 @@ svg(viewbox='0 0 700 700', width="100%", height="100%", version='1.1', xmlns='ht
         femergenode(in='shadowMatrixOuter1')
         femergenode(in='SourceGraphic')
 
-  svg(viewbox='0 0 306 286', width='100%', height='30%', preserveaspectratio='xMidYMid meet', y='10%', x='0%')
+  svg#js-svg-logo(viewbox='0 0 306 286', width='100%', height='30%', preserveaspectratio='xMidYMid meet', y='10%', x='0%')
     g#ff14_logo(transform='translate(0, 0)')
       g#ff14_logo_shape_bg
         use(xlink:href='#shape')
@@ -27,21 +27,22 @@ svg(viewbox='0 0 700 700', width="100%", height="100%", version='1.1', xmlns='ht
 
   text#t1.cern.date(x='0', y='1%')= text.binary1
   text#t2.cern.date.screen-time(x='100%', y='1%')= text.binary2
-  text.cern(x='50%', y='50%')= text.date + ' ' + text.location
-  text.cern(x='50%', y='55%') _
-  text.cern(x='50%', y='65%', textLength='700', lengthAdjust='spacing')= line[0]
-  text.cern(x='50%', y='75%')= line[1]
+  svg#js-svg-text(y='0%')
+    text.cern(x='50%', y='50%')= text.date + ' ' + text.location
+    text.cern(x='50%', y='55%') _
+    text.cern(x='50%', y='65%', textLength='700', lengthAdjust='spacing')= line[0]
+    text.cern(x='50%', y='75%')= line[1]
 
-  - var button_svg = button
-  - button_svg = button_svg.replace('</abbr>', '</tspan>')
-  - button_svg = button_svg.replace('<abbr ', '<tspan>')
-  - button_svg = button_svg.replace('title="', '<title>')
-  - button_svg = button_svg.replace('">', '</title>')
-  - var space = (100 - size) / 2
-  if buy
-    a.anchor(xlink:href='http://leftlogic.stagehq.com', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', target='_top')
+    - var button_svg = button
+    - button_svg = button_svg.replace('</abbr>', '</tspan>')
+    - button_svg = button_svg.replace('<abbr ', '<tspan>')
+    - button_svg = button_svg.replace('title="', '<title>')
+    - button_svg = button_svg.replace('">', '</title>')
+    - var space = (100 - size) / 2
+    if buy
+      a.anchor(xlink:href='http://leftlogic.stagehq.com', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', target='_top')
+        rect.button(x=space+'%', y='82%', width=size+'%', height='10%')
+        text.cern.link(x='50%', y='90%')!= button_svg
+    else
       rect.button(x=space+'%', y='82%', width=size+'%', height='10%')
-      text.cern.link(x='50%', y='90%')!= button_svg
-  else
-    rect.button(x=space+'%', y='82%', width=size+'%', height='10%')
-    text.cern.link(x='50%', y='90%')= button_svg
+      text.cern.link(x='50%', y='90%')= button_svg

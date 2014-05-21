@@ -39,6 +39,8 @@
     var $s = document.getElementById('screen');
     var $t1 = document.getElementById('t1');
     var $t2 = document.getElementById('t2');
+    var $svg_text = document.getElementById('js-svg-text');
+    var $svg_logo= document.getElementById('js-svg-logo');
     var $monitor = document.getElementById('monitor');
     var monitorStyle = window.getComputedStyle($monitor, null);
 
@@ -49,12 +51,13 @@
       };
       $s.style.height = winSize.h + 'px';
       $s.className += " " + 'js-mega';
-      // move the binary dates at the top
+      
       var svgSize = {
         w: parseInt(monitorStyle.getPropertyValue('width')) - parseInt(monitorStyle.getPropertyValue('padding-left')) - parseInt(monitorStyle.getPropertyValue('padding-right')),
         h: parseInt(monitorStyle.getPropertyValue('height')) - parseInt(monitorStyle.getPropertyValue('padding-bottom')) - parseInt(monitorStyle.getPropertyValue('padding-top'))
       };
       if (winSize.h > winSize.w) {
+        // move the binary dates at the top
         var diff = (svgSize.h - svgSize.w) / -2;
         if (diff < -10) {
           diff = diff + 10;
@@ -62,8 +65,12 @@
         diff = diff * 700 / svgSize.w;
         $t1.setAttribute('y', diff + 'px');
         $t2.setAttribute('y', diff + 'px');
-        console.log(svgSize.w, svgSize.h);
-        console.log(diff);
+
+        // resize logo and move text down
+        if (/mobi/i.test(navigator.userAgent)) {
+          $svg_text.setAttribute('y', '20%');
+          $svg_logo.setAttribute('height', '50%');
+        }
       }
     };
     mega();
@@ -109,7 +116,8 @@
     }, 750);
   } else {
     // only scroll the front page
-    $nav.length > 0 && location.pathname === '/' && /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+    // && /mobi/i.test(navigator.userAgent) 
+    $nav.length > 0 && location.pathname === '/' && !location.hash && setTimeout(function () {
       if (!pageYOffset) window.scrollTo(0, $nav[0].offsetHeight);
     }, 750);
   }
@@ -128,7 +136,7 @@
 
   function scrollCircuit() {
     var scrolled = document.body.scrollTop;
-    console.log('scrolling ' + scrolled);
+    // console.log('scrolling ' + scrolled);
     $vents2.style.webkitTransform = 'translate3d(0, ' + (scrolled * speed) + 'px, 0)';
   }
 
