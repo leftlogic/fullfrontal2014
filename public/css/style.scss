@@ -176,6 +176,11 @@ p {
     display: block;
     font-size: 32px;
     padding-bottom: 5px;
+
+    &:hover, &:focus, &:active {
+      color: $c-green;
+      text-shadow: 0 0 10px $c-green-glow;
+    }
   }
 }
 
