@@ -20,3 +20,4 @@
 * Opera mobile not loading cern font in header svg
 * Pattern background with dark line for header
 * Become a sponsor button wrapping
+* Go to top link?
