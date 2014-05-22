@@ -116,7 +116,7 @@
     }, 750);
   } else {
     // only scroll the front page
-    // && /mobi/i.test(navigator.userAgent) 
+    // && /mobi/i.test(navigator.userAgent)
     $nav.length > 0 && location.pathname === '/' && !location.hash && setTimeout(function () {
       if (!pageYOffset) window.scrollTo(0, $nav[0].offsetHeight);
     }, 750);
@@ -142,4 +142,27 @@
 
   window.addEventListener('touchmove', scrollCircuit);
   window.addEventListener('scroll', scrollCircuit);
+})();
+
+
+// Browsers that screw up our svg
+(function() {
+  var ua = navigator.userAgent;
+  var win8_1 = 'Windows NT 6.3';
+  var ie10 = 'MSIE 10.0';
+  var safari = 'Safari';
+  var chrome = 'Chrome';
+  var isIE11_win8_1 = false;
+  var isSafari = false;
+  
+  if (ua.match(win8_1) && !ua.match(ie10)) {
+    isIE11_win8_1 = true;
+  }
+  if (ua.match(safari) && !ua.match(chrome)) {
+    isSafari = true;
+  }
+
+  if (isIE11_win8_1 || isSafari) {
+    document.documentElement.className += ' no-svg-vents';
+  }
 })();

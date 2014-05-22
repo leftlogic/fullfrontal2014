@@ -252,6 +252,9 @@
       background-image: url(../images/case.png), url(../images/case.png), url(../images/vents-big.svg);
       height: 167px; // 170px
     }
+    .no-svg-vents &:after {
+      background-image: url(../images/case.png), url(../images/case.png), url(../images/vents-big.png);
+    }
     .no-svg &:after {
       background-image: url(../images/vents-big.png);
     }
