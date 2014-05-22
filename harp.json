@@ -3,7 +3,7 @@
     "siteTitle": "Full Frontal :: JavaScript Conference :: 7th November 2014",
     "analytics": "UA-1656750-32",
     "config": {
-      "phase": 3,
+      "phase": 0,
       "soldout": {
         "conference": false,
         "workshops": false,
