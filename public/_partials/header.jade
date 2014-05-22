@@ -7,7 +7,7 @@
 - text.binary2 = '1110000100 - 11100001000'
 
 - var line = 'Tickets will be sold on the\n9th July and 16th July.'
-- var button = 'More Info'
+- var button = ''
 - var buy = true
 - var on = false
 - var size = 40
@@ -89,10 +89,11 @@ header.masthead(role='banner')
               = "\n"
               span.tickets-line= line[1]
               = "\n"
-            if buy
-              a.screen-button(href='http://leftlogic.stagehq.com')!= button
-            else
-              span.screen-button= button
+            if button != ''
+              if buy
+                a.screen-button(href='http://leftlogic.stagehq.com')!= button
+              else
+                span.screen-button= button
     div.screen-shadow
 
   div.machine#machine
