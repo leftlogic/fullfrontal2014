@@ -197,8 +197,7 @@
   }
   .footer {
     max-width: 628px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 36px 0 80px;
   }
 
   .nav-main {
@@ -446,9 +445,6 @@
     width: calc(((100% - (40px * 5)) / 6 * 2) + 80px);
   }
 
-  .footer {
-    padding-bottom: 80px;
-  }
   .twitter {
     font-size: 60px;
     line-height: 46px;
