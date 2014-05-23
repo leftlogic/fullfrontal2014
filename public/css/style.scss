@@ -346,9 +346,6 @@ p {
     right: 0;
     height: 107px; // 110px
   }
-  .no-svg-vents &:after {
-    background-image: url(../images/case.png), url(../images/case.png), url(../images/vents-small.png);
-  }
   .no-svg &:after {
     background: transparent url(../images/vents-small.png) repeat scroll center center;
   }
@@ -390,6 +387,13 @@ p {
   .vents {
     background: transparent;
   }
+}
+.vents-clone-wrapper {
+  white-space: nowrap;
+}
+.vents-clone {
+  display: inline-block;
+  position: relative;
 }
 .mother {
   margin-bottom: 10px;

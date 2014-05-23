@@ -163,6 +163,29 @@
   }
 
   if (isIE11_win8_1 || isSafari) {
-    document.documentElement.className += ' no-svg-vents';
+    var winW = window.innerWidth;
+    var mq = 768;
+    var w = 330;
+    var img = 'small';
+    var $vents = document.getElementById('vents');
+    var $ventsClone = document.createElement('div');
+    var $obj = document.createElement('object');
+    var repeat = 0;
+
+    if (winW >= mq) {
+      img = 'big';
+      w = 840;
+    }
+
+    repeat = Math.ceil(winW / w) + 1;
+    $ventsClone.className = 'vents-clone-wrapper';
+    $vents.appendChild($ventsClone);
+    $obj.setAttribute('type', 'image/svg+xml');
+    $obj.setAttribute('data', '/images/vents-' + img + '.svg');
+    $obj.className = 'vents-clone';
+    $ventsClone.appendChild($obj);
+    for (var i = 1; i < repeat; i++) {
+      $ventsClone.appendChild($obj.cloneNode(false));
+    }
   }
 })();
