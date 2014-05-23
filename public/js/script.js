@@ -189,3 +189,69 @@
     }
   }
 })();
+
+
+// Switch button
+(function() {
+  Element.prototype.on = Element.prototype.addEventListener;
+  Element.prototype.off = Element.prototype.removeEventListener;
+  var $caseButton = document.querySelectorAll('.case-button')[0];
+  var $caseLight = document.querySelectorAll('.case-light')[0];
+  var $vents = document.getElementById('vents');
+  
+  var $left = document.createElement('div');
+  var $right = document.createElement('div');
+  $caseButton.className += ' js-case-button';
+  $left.className = 'case-button-left';
+  $right.className = 'case-button-right';
+  $caseButton.appendChild($left);
+  $caseButton.appendChild($right);
+  
+  var press = function(event) {
+    target = event.target.className.replace('case-button-', '');
+    if (target === 'left' && $caseButton.className.indexOf('button-on') === -1) {
+      turnOn();
+      $left.on('mouseup', release);
+      $left.on('mouseout', release);
+      $left.on('touchend', release);
+    } else if (target === 'right' && $caseButton.className.indexOf('button-on') !== -1) {
+      turnOff();
+      $right.on('mouseup', release);
+      $right.on('mouseout', release);
+      $right.on('touchend', release);
+    }
+  };
+  var release = function(event) {
+    target = event.target.className.replace('case-button-', '');
+    if (target === 'left' && $caseButton.className.indexOf('button-on') !== -1) {
+      turnOff();
+    } else if (target === 'right' && $caseButton.className.indexOf('button-on') === -1) {
+      turnOn();
+    }
+    $left.off('mouseup', release);
+    $left.off('mouseout', release);
+    $left.off('touchend', release);
+    $right.off('mouseup', release);
+    $right.off('mouseout', release);
+    $right.off('touchend', release);
+  };
+  
+  var turnOn = function() {
+    $caseButton.className += ' case-button-on';
+    $caseLight.className += ' case-light-on';
+    $vents.className += ' vents-on';
+  };
+  var turnOff = function() {
+    $caseButton.className = $caseButton.className.replace('case-button-on', '');
+    $caseLight.className = $caseLight.className.replace('case-light-on', '');
+    $vents.className = $vents.className.replace('vents-on', '');
+  };
+  
+  if ($caseButton.className.indexOf('button-on') === -1) {
+    $left.on('mousedown', press);
+    $left.on('touchstart', press);
+  } else {
+    $right.on('mousedown', press);
+    $right.on('touchstart', press);
+  }
+})();

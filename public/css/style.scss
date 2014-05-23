@@ -482,6 +482,20 @@ p {
 .case-light-on {
   background-color: $c-led-blue;
 }
+.js-case-button {
+  position: relative;
+}
+.case-button-left,
+.case-button-right {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  top: 0;
+}
+.case-button-right {
+  left: 50%;
+}
 
 /* Sections
    ========================================================================== */
