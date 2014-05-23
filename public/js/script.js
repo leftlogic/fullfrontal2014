@@ -126,8 +126,7 @@
 
 // Parallax for circuit/vent
 (function() {
-  var speed = 0.2;
-  var offset = 10;
+  var offset = 100;
   var $machine = document.getElementById('machine');
   var $vents = document.getElementById('vents');
   var $vents2 = document.createElement('div');
@@ -139,11 +138,12 @@
   $vents2.style.top = ($case.offsetHeight - offset) + 'px';
   $machine.className += ' js-vents';
   $vents.parentNode.insertBefore($vents2, $vents.previousSibling);
+  var speed = (window.innerHeight - $vents.offsetHeight) / 2;
 
   function scrollCircuit() {
-    var scrolled = document.body.scrollTop - ($vents.offsetTop / 2);
-    console.log('scrolling ' + scrolled);
-    $vents2.style.webkitTransform = 'translate3d(0, ' + (scrolled * speed) + 'px, 0)';
+    var scrolled = (speed - $vents.getBoundingClientRect().top) * offset / speed;
+    $vents2.style.webkitTransform = 'translate3d(0, ' + scrolled + 'px, 0)';
+    $vents2.style.MozTransform = 'translate3d(0, ' + scrolled + 'px, 0)';
   }
 
   window.addEventListener('touchmove', scrollCircuit);
