@@ -56,45 +56,46 @@ if config.phase == 4
 
 
 header.masthead(role='banner')
-  if config.phase >= 1
-    nav.nav-main(role='navigation')
-      each item in menu
-        a(href='#' + item)=capitalize(item)
-        = "\n"
-    //- p#show-menu Pull down for navigation...
+  div.screen-gradient
+    if config.phase >= 1
+      nav.nav-main(role='navigation')
+        each item in menu
+          a(href='#' + item)=capitalize(item)
+          = "\n"
+      //- p#show-menu Pull down for navigation...
 
-  div#screen.screen-wrapper
-    div#monitor.screen
-      include monitor
-      //- non svg version
-      div.screen-svg-alternate
-        div.screen-date
-          time.screen-day(datetime=text.datetime)= text.binary1
-          time.screen-time(datetime=text.datetime)= text.binary2
+    div#screen.screen-wrapper
+      div#monitor.screen
+        include monitor
+        //- non svg version
+        div.screen-svg-alternate
+          div.screen-date
+            time.screen-day(datetime=text.datetime)= text.binary1
+            time.screen-time(datetime=text.datetime)= text.binary2
 
-        h1.logo(role='heading', aria-level='1')
-          span Full Frontal 2014
+          h1.logo(role='heading', aria-level='1')
+            span Full Frontal 2014
 
-        div.details-tickets-wrapper
+          div.details-tickets-wrapper
 
-          div.details-wrapper
-            time.dtstart(title=text.datetime, datetime=text.datetime)= text.date
-            = "\n"
-            span.
-            span.location= text.location
-
-          div.tickets-wrapper
-            p.tickets-lines
-              span.tickets-line= line[0]
+            div.details-wrapper
+              time.dtstart(title=text.datetime, datetime=text.datetime)= text.date
               = "\n"
-              span.tickets-line= line[1]
-              = "\n"
-            if button != ''
-              if buy
-                a.screen-button(href='http://leftlogic.stagehq.com')!= button
-              else
-                span.screen-button= button
-    div.screen-shadow
+              span.
+              span.location= text.location
+
+            div.tickets-wrapper
+              p.tickets-lines
+                span.tickets-line= line[0]
+                = "\n"
+                span.tickets-line= line[1]
+                = "\n"
+              if button != ''
+                if buy
+                  a.screen-button(href='http://leftlogic.stagehq.com')!= button
+                else
+                  span.screen-button= button
+      div.screen-shadow
 
   div.machine#machine
     div.case
