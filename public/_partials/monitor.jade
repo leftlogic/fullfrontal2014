@@ -3,8 +3,8 @@ svg(viewbox='0 0 700 700', width="100%", height="100%", version='1.1', xmlns='ht
   defs
     pattern#stripe(patternunits='userSpaceOnUse', width='1', height='4')
       rect(x='0', y='0', width='1', height='1')
-    pattern#stripe2(patternunits='userSpaceOnUse', width='10', height='6')
-      rect(x='0', y='0', width='10', height='1.5')
+    pattern#stripe2(patternunits='userSpaceOnUse', width='10', height='0.95%')
+      rect(x='0', y='0', width='10', height='1')
     path#shape(d='M20,60 L20,40 L40,40 L40,20 L60,20 L60,0 L280,0 L280,200 L260,200 L260,220 L240,220 L240,240 L220,240 L220,260 L0,260 L0,60 L20,60 L20,60 Z')
     path#f(d='M50,171 L50,91 L80,91 L80,60 L50,60 L50,31 L80,31 L80,0 L20,0 L20,60 L0,60 L0,91 L20,91 L20,171 L50,171 L50,171 Z')
     filter#glow(x='-50%', y='-50%', width='200%', height='200%', filterunits='objectBoundingBox')
@@ -15,7 +15,7 @@ svg(viewbox='0 0 700 700', width="100%", height="100%", version='1.1', xmlns='ht
         femergenode(in='shadowMatrixOuter1')
         femergenode(in='SourceGraphic')
 
-  svg#js-svg-logo(viewbox='0 0 306 286', width='100%', height='30%', preserveaspectratio='xMidYMid meet', y='10%', x='0%')
+  svg#js-svg-logo(viewbox='0 0 306 286', width='100%', height='30%', preserveaspectratio='xMidYMid meet', y='10%', x='0%', shape-rendering='crispEdges')
     g#ff14_logo(transform='translate(0, 0)')
       g#ff14_logo_shape_bg
         use(xlink:href='#shape')
