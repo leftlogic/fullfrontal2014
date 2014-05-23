@@ -371,13 +371,13 @@ p {
   }
 }
 #vents2 {
-  $padding: -100px;
+  // $padding: -100px;
   background: $c-black url(../images/circuit.png);
-  bottom: $padding;
-  left: $padding;
+  // bottom: $padding;
+  // left: $padding;
   position: absolute;
-  right: $padding;
-  top: 0;
+  // right: $padding;
+  // top: 0;
 }
 .js-vents {
   &.machine {
