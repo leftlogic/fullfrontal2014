@@ -143,6 +143,8 @@ p {
 .case {
   padding-left: 10px;
   padding-right: 10px;
+  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */ /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /* Header
@@ -424,9 +426,6 @@ p {
 
   background: -webkit-linear-gradient(left, rgba($c-black, .2) 0%, rgba($c-white, 0) 8%);
   background:     linear-gradient(to right, rgba($c-black, .2) 0%, rgba($c-white, 0) 8%);
-
-  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */ /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   &:before, &:after {
     content: "I\2009\2009";
