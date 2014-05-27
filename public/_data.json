@@ -73,40 +73,15 @@
         "url": "https://developers.google.com/live/chrome/",
         "img": "chrome.png",
         "blurb": "Google’s mission is to organise the world’s information and make it universally accessible and useful. [Find out more](https://developers.google.com/live/chrome/)."
-      },
-      {
-        "url": "http://www.adobe.com/products/creativecloud.html",
-        "img": "adobe.gif",
-        "blurb": "Discover new ways to work with Adobe Creative Cloud. All the tools you love, totally reimagined. Plus, new apps and more connected tools and services. Get started with a free [Creative Cloud Membership](http://www.adobe.com/products/creativecloud.html)."
       }
     ],
     "half": [
       {
-        "url": "http://www.webapplicationsuk.com/",
-        "img": "webappsuk.gif"
-      },
-      {
-        "url": "http://developer.blackberry.com/",
-        "img": "blackberry.gif"
-      },
-      {
-        "url": "http://mozilla.org/",
-        "img": "mozilla.gif"
-      },
-      {
-        "url": "http://modern.IE",
-        "img": "microsoft.gif"
+        "url": "http://http://www.brandwatch.com/",
+        "img": "brandwatch.png"
       }
     ],
-    "small": [
-    {
-        "url": "http://p.ota.to/",
-        "img": "potato.png"
-
-    },{
-        "url": "http://uk.mailjet.com/?utm_source=full-frontal.org&utm_medium=banner&utm_campaign=sponsoring-full-frontal?p=full-frontal-2013",
-        "img": "mailjet.gif"
-      }]
+    "small": []
   },
   "sessions": {
     "startTime": "2013-11-08 09:00",
