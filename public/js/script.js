@@ -214,6 +214,7 @@
   $caseButton.appendChild($right);
   
   var press = function(event) {
+    event.preventDefault();
     target = event.target.className.replace('case-button-', '');
     if (target === 'left' && $caseButton.className.indexOf('button-on') === -1) {
       turnOn();
@@ -231,6 +232,7 @@
     target = event.target.className.replace('case-button-', '');
     if (target === 'left' && $caseButton.className.indexOf('button-on') !== -1) {
       turnOff();
+      console.log('No, we\'re not ready yet, come back when tickets come on sale. <3');
     } else if (target === 'right' && $caseButton.className.indexOf('button-on') === -1) {
       turnOn();
     }
