@@ -79,6 +79,10 @@
       {
         "url": "http://www.brandwatch.com/",
         "img": "brandwatch.png"
+      },
+      {
+        "url": "https://digitalocean.com/",
+        "img": "digitalocean1.png"
       }
     ],
     "small": []
