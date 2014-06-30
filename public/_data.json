@@ -162,60 +162,6 @@
   },
   "workshops": [
     {
-      "title": "Fast and Beautiful Mobile Apps with PhoneGap",
-      "slug": "phonegap",
-      "ticket": {
-        "url": "https://leftlogic.stagehq.com/events/2413",
-        "price": "400"
-      },
-
-      "details": {
-        "date": "7th Nov 2014",
-        "time": "09:00 — 17:00",
-        "venue": "The Lighthouse"
-      },
-
-      "speaker": {
-        "name": "Brian LeRoux & Christophe Coenraets",
-        "photo": "phonegap.jpg",
-        "photo-faces": "brian-and-christophe.jpg"
-      },
-
-      "topics" : [
-        {
-          "title": "The PhoneGap APIs"
-        },
-        {
-          "title": "Topcoat"
-        },
-        {
-          "title": "The Single Page Architecture"
-        },
-        {
-          "title": "Client-side HTML templates"
-        },
-        {
-          "title": "Effective Touch Events"
-        },
-        {
-          "title": "Modularization Approaches"
-        },
-        {
-          "title": "Mobile Performance Optimization Techniques"
-        },
-        {
-          "title": "Comparison of  Leading JavaScript frameworks"
-        },
-        {
-          "title": "PhoneGap Plugins"
-        }
-
-      ],
-      "description": "Tired of Hello World? In this workshop, you will learn modern strategies and best practices to build native-like mobile applications with HTML, JavaScript, and CSS. You'll also learn how to use PhoneGap to leverage the native capabilities of your device in JavaScript and to package your HTML application as a native app for distribution through the different app stores.",
-
-      "extendedDescription": "With the focus on performance and architecture, this workshop will give you the keys to fast, robust, and successful PhoneGap applications.\n\nYou will build a PhoneGap application from scratch using the Single Page Architecture, HTML templates, touch events, modularization techniques, and many performance optimization techniques. We will also compare and contrast the leading JavaScript and Mobile Frameworks, and you will use the new Topcoat CSS toolkit as the basis for your application UI."
-    },
-    {
       "title": "Debug, and Know Thy Tools",
       "slug": "debug-and-tools",
       "ticket": {
