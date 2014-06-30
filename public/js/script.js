@@ -90,7 +90,7 @@
 
   var $nav = $('.nav-main');
   var today = new Date();
-  var confDay = new Date('2014-05-16');
+  var confDay = new Date('2014-11-07');
   var best = null;
   var isConfDay = (today.getDate() === confDay.getDate()) &&
                   (today.getMonth() === confDay.getMonth()) &&
