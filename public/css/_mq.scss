@@ -312,6 +312,10 @@
   }
   .session-content {
     padding-top: 40px;
+
+    .session-style-titles & {
+      padding-top: 20px;
+    }
   }
   .session-wrapper {
     // display: table;

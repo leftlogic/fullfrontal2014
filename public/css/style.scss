@@ -617,6 +617,10 @@ p {
 .session-content {
   clear: both;
   padding-top: 25px; //50px
+
+  .session-style-titles & {
+    padding-top: 0;
+  }
 }
 .session-links {
   margin-top: 20px; //40px
