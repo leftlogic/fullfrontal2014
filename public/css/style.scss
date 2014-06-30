@@ -111,6 +111,9 @@ p {
   font-weight: normal;
   line-height: 1.7;
 }
+.workshop-content + .workshop-content {
+  padding-top: 1em;
+}
 .workshop-list {
   font-weight: 500;
   line-height: 1.7;

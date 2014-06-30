@@ -18,7 +18,10 @@ section.main(role='region', aria-labelledby='workshops')
           a(href='#')= workshop.speaker.name
           div.workshop-time= workshop.details.date + ', ' +  workshop.details.time
       div.workshop-content-wrapper
-        p.workshop-content= workshop.description
+        div.workshop-content
+          !=global.marked(workshop.description)
+        div.workshop-content
+          !=global.marked(workshop.extendedDescription)
         if workshop.topics
           ul.workshop-list
             each topic in workshop.topics
