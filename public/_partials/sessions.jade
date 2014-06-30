@@ -10,6 +10,7 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
     else
       a.button(href='#') Buy Tickets
   ol.sessions-wrapper
+    - var totalSessions = 0;
     each session, index in public._data.sessions.sessions
       - if (!session.start) {
       -   session.start = pad(time.getHours()) + ':' + pad(time.getMinutes())
@@ -18,6 +19,8 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
       - if (!session.end) {
       -   session.end = pad(time.getHours()) + ':' + pad(time.getMinutes())
       - }
+      - if (!session.break) totalSessions++;
+
       if (session.break && config.phase == 3) || !session.break
         li.session-wrapper.sub-hr.js-session(id='slug' + index, data-date=today + session.start)
           if session.break
@@ -58,3 +61,7 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
                         a.icon-notes(href=session.audio) Audio
                       if session.video
                         a.icon-video(href=session.video) Video
+
+    if totalSessions < 8
+      li.session-wrapper.sub-hr.js-session(id='slugMoreToCome')
+        h3 More sessions to be announced soon.
