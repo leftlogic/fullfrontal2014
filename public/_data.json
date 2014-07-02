@@ -132,6 +132,21 @@
         "video": false
       },
       {
+        "duration": 40,
+        "title": "Moving through seamlessly through offline and online",
+        "speaker": {
+          "name": "",
+          "twitter": "",
+          "photo": ""
+        },
+        "description": "Unlike the always-wired machines of the past, computers are now truly personal, and people move through online and offline seamlessly. We'll explore how and why our apps should do the same, using Hood.ie and offline-first principles to do it in record time",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
         "break": true,
         "title": "Coffee break (30 mins)",
         "duration": 30
