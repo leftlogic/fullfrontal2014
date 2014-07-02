@@ -130,7 +130,13 @@ p {
   }
 }
 .tbc {
-  color: #9e9e9e;
+  color: $c-text-disabled;
+}
+.more-sessions {
+  color: $c-text-disabled;
+  font-size: 17px;
+  font-weight: normal;
+  margin-top: 27px;
 }
 
 /* Grid
