@@ -84,6 +84,10 @@
       {
         "url": "https://digitalocean.com/",
         "img": "digitalocean1.png"
+      },
+      {
+        "url": "https://nodesource.com",
+        "img": "nodesource.png"
       }
     ],
     "small": []
