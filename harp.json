@@ -4,7 +4,7 @@
     "date": "2014-11-07",
     "analytics": "UA-1656750-37",
     "config": {
-      "phase": 1,
+      "phase": 0.5,
       "soldout": {
         "conference": false,
         "workshops": false,
@@ -15,9 +15,10 @@
         "mode-options": "titles|speakers|schedule // just a comment",
         "phase-options": {
           "0": "before selling any ticket",
+          "0.5": "release of topics before selling tickets",
           "1": "first batch of tickets",
           "2": "second batch of tickets",
-          "3": "release of the topics",
+          "3": "release of the full sessions",
           "4": "after the conference"
         }
       }

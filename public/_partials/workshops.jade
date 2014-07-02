@@ -7,9 +7,11 @@ section.main(role='region', aria-labelledby='workshops')
         if config.soldout[workshop.slug]
           span.button.button-disabled Sold Out
         else
-          a.button(href='/workshop/' + workshop.slug) Buy Tickets
+          a.button(href='/workshop/' + workshop.slug) Tickets £425 
+            small + VAT
       else
-        a.button(href='/workshop/' + workshop.slug) Find More
+        span.button.button-disabled Tickets £425 
+          small + VAT
       sub.button-sub Includes Conference Ticket
     section.workshop-wrapper.sub-hr(id=workshop.slug)
       header
