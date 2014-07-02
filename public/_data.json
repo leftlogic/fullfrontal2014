@@ -33,25 +33,25 @@
         {
           "name": "Jury's Inn",
           "url": "http://brightonhotels.jurysinns.com/",
-          "detail": "£68 Thu, £80 Fri",
+          "detail": "from £64",
           "extra": "next to Train station & close to venue",
           "extra-discount": "quote \"Left Logic\" for the discount"
         },
         {
           "name": "Travellodge",
-          "url": "http://www.travelodge.co.uk/hotels/info?hotelId=18",
-          "detail": "£22.80 Thu, £26.75 Fri"
+          "url": "http://www.travelodge.co.uk/hotels/18/Brighton-hotel",
+          "detail": "from £28"
         },
         {
           "name": "My Hotel",
           "url": "http://www.myhotels.com/my-hotel-brighton/index.html",
-          "detail": "Thu £100/£120, Fri £120/£140",
+          "detail": "from £80",
           "extra": "standard and superior respectively"
         },
         {
           "name": "Old Ship Hotel",
-          "url": "http://www.pumahotels.co.uk/hotels/old-ship-brighton-hotel/",
-          "detail": "Thu £92, Fri £142",
+          "url": "http://www.thehotelcollection.co.uk/hotels/old-ship-brighton-hotel/",
+          "detail": "from £82",
           "extra": "close to after party venue"
         }
       ]
@@ -60,9 +60,10 @@
       "type": "Food & Drink",
       "icon": "beer",
       "location": [
-        {"name": "Bardsley's", "detail": "fish 'n chips", "url": "http://www.bardsleys-fishandchips.co.uk/map "},
-        {"name": "The Open House", "detail": "good pub food", "url": "http://goo.gl/csghA"},
-        {"name": "Circus Circus", "detail": "pub serving Thai food", "url": "http://goo.gl/VNUwb"}
+        {"name": "Bardsley's", "detail": "fish 'n chips", "url": "http://www.bardsleys-fishandchips.co.uk/map"},
+        {"name": "The Open House", "detail": "good pub food", "url": "http://goo.gl/maps/eZPV8"},
+        {"name": "Circus Circus", "detail": "pub serving Thai food", "url": "http://goo.gl/VNUwb"},
+        {"name": "La Choza", "detail": "mexican street food", "url": "http://www.hareandhoundsbrighton.com/"}
       ]
     }
   ],
