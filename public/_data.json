@@ -143,7 +143,22 @@
           "twitter": "",
           "photo": ""
         },
-        "description": "Unlike the always-wired machines of the past, computers are now truly personal, and people move through online and offline seamlessly. We'll explore how and why our apps should do the same, using Hood.ie and offline-first principles to do it in record time",
+        "description": "Unlike the always-wired machines of the past, computers are now truly personal, and people move through online and offline seamlessly. We'll explore how and why our apps should do the same, using Hood.ie and offline-first principles to do it in record time.",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
+        "duration": 40,
+        "title": "Navigating Open Source",
+        "speaker": {
+          "name": "",
+          "twitter": "",
+          "photo": ""
+        },
+        "description": "Distributed, Non-Profit, Sustainable and Open Source: Ghost does nothing the easy way. Discover why the project made these choices and how they're creating a community and shipping code in the open.",
         "bio": "",
         "links": [],
         "slides": false,
