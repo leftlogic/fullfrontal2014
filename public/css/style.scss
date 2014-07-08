@@ -11,34 +11,34 @@ $old-ie: false;
 /**
  * @license
  * MyFonts Webfont Build ID 2812773, 2014-05-15T19:20:06-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: Proxima Nova SemiBold by Mark Simonson
  * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/semibold/
- * 
+ *
  * Webfont: Proxima Nova Regular by Mark Simonson
  * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
- * 
+ *
  * Webfont: Proxima Nova Bold by Mark Simonson
  * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
- * 
- * 
+ *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2812773
  * Licensed pageviews: 1,000,000
  * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
- * 
+ *
  * © 2014 MyFonts Inc
 */
 @include font-face('Proxima Nova', "http://media.full-frontal.org/fonts/proximanova_regular", normal);
 @include font-face('Proxima Nova', "http://media.full-frontal.org/fonts/proximanova_semibold", 500);
 @include font-face('Proxima Nova', "http://media.full-frontal.org/fonts/proximanova_bold", bold);
 
-*, *:after, *:before { 
+*, *:after, *:before {
   @include box-sizing(border-box);
 }
 body {
@@ -58,7 +58,7 @@ a {
   border-bottom: 1px solid $c-orange;
   text-decoration: none;
 
-  &:link, &:visited { 
+  &:link, &:visited {
     color: $c-orange;
   }
   &:hover, &:focus, &:active {
@@ -110,12 +110,21 @@ p {
 .blurb {
   font-weight: normal;
   line-height: 1.7;
+
+  & > p {
+    font-weight: 500;
+  }
 }
 .workshop-content-extended {
   padding-top: 1em;
+
+  p {
+    margin: 1em 0;
+    font-weight: 200;
+  }
 }
 .workshop-list {
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.7;
   list-style: none;
   margin: 0;
@@ -179,7 +188,7 @@ p {
   // display: none;
   padding-top: 30px;
   padding-bottom: 50px;
-  
+
   a {
     border-bottom: 0 none;
     display: block;
@@ -678,7 +687,7 @@ p {
   margin-bottom: 10px;
   margin-top: 10px;
   width: 100%; // this is for IE
-  
+
   a {
     border-bottom: 0 none;
     display: block;

@@ -8,13 +8,80 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
       if config.soldout.conference
         span.button.button-disabled Sold Out
       else
-        a.button(href='#') Tickets £160 
+        a.button(href='#') Tickets £160
           small + VAT
     else
-      span.button.button-disabled Tickets £160 
+      span.button.button-disabled Tickets £160
         small + VAT
   ol.sessions-wrapper
     - var totalSessions = 0;
+    if config.phase < 3
+      //
+        |  
+        |  
+        |  
+        |  
+        |  
+        |  Hi there.
+        |  
+        |  So, you might be looking for the speakers for this wonderful event. Good for you!
+        |  
+        |  However, as with previous years of ffconf, we will only annouce the sessions (that have been confirmed)
+        |  whilst we're selling tickets, because, well, you're attending for the amazing content, not just the
+        |  pretty faces we'll have lined up, eh?
+        |  
+        |  That's not to dismiss how amazing our speakers are - they truly are, but you'll have to wait until *after*
+        |  we've sold all our tickets to find out exactly who they are.
+        |  
+        |  Good luck!
+        |  
+        |  See you in November I hope!
+        |  
+        |  – Remy
+        |  
+        |  
+        |  
+        |  Also, this:
+        |  
+        |  
+        |  
+        |                        \_            /;              _.._
+        |                        `\~--.._     //'            ,(+=\\\\
+        |                         `//////\  \\/;'             /~ (\\\\
+        |                           ~/////\~\`)'             /;   ))))
+        |                               `~'  |              ((`~/((((\
+        |                               ;'_\'\             /'))   )))))
+        |                              /~/ '" "'     _.  /'/\_ /^\`((( \
+        |                             `\/'       _.-~/--/ (  =(   | ,  |
+        |                                     _/~\_)_}___/^\/~`\.__\|==|
+        |                                    /uUUU)        )        |  |
+        |                                   (   / |      _-=o|\__ /'/~ \
+        |                                   ' /'  |     /(((((\`\(  |~\/
+        |                                   /'    |   /' )))))"`\`\|/_/---.._,$$,
+        |                             .,ssS$$$Sss|._/_..-((('    )\)>>>      ~\$
+        |                          ,sS$$$$$$$$$$$|$$$$$$$  |/    //'~`o        `\
+        |                        ,$$$$$$$$$$$$$$|$$S$$$$'  (    /                \
+        |                      ,$$$$$$$$$$$$S$$|$$$$$$$'   |   /              ,s$$$
+        |                    s$$$$$S$$$$$$$$$S|$$$$$$$$    |  /              $$$$$$
+        |                  _~,$S""''     ``"S|$$S$$$$$"    (_,`\,          ,$$$$$$$;
+        |                /~ ,"'             / 'S$$$$$"      \_./|        s$$$$$$$$$$
+        |             (~'      _,  \==~~)  /     """         \  |       $$$$$$$$$$$$
+        |              (0\   /0/     \-' /'                   \ |  |  ,$$$$$$$$$$$$$,
+        |              `/'  '         _-~                     |= \_-\ $$$$$$$$$$$$$$s
+        |              (~~~)      _.-~_-   \             \  ,s|= |   `"$$$$$$$$$$$$$$$
+        |             ( `-'  )/>-~  _/-__   |            |,$$$|_/,      `"$$$$$$$$$$$$
+        |             /V^^^^V~/' _/~/~~  ~~-|            |$$$$$$$$         "$$$$$$$$$$,
+        |            /  (^^^^),/' /'        )           /S$$$$$$$;         ,$$$$$$$$$$$,
+        |          ,$$_  `~~~'.,/'         /     _-ss, /(/-(/-(/'        ,s$$$$$$$$$$$$$
+        |        ,s$$$$$ssSS$$$'         ,$'.s$$$$$$$$'                  (/-(/-(/-(/-(/'
+        |       S$$$$$$$$$$$$$$        ,$$$$$$$$$$$$$'
+        |      (/-(/-(/-(/-(/'      _s$$$$$$$$$$$$$$
+        |                          (/-(/-(/-(/-(/-'
+        |  
+        |  
+        |  
+        |  
+        |  
     each session, index in public._data.sessions.sessions
       - if (!session.start) {
       -   session.start = pad(time.getHours()) + ':' + pad(time.getMinutes())
