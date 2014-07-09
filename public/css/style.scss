@@ -133,9 +133,13 @@ p {
   & li {
     &:before {
       content: '\2713';
-      padding-right: 10px;
+      padding-right: 0.9em;
       margin-left: -1.4em;
     }
+  }
+
+  & li span {
+    font-weight: 400;
   }
 }
 .tbc {

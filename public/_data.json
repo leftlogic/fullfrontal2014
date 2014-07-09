@@ -243,7 +243,7 @@
     },
 
     {
-      "title": "How to really test",
+      "title": "Testing for Front End Ops",
       "slug": "testing",
       "ticket": {
         "url": "https://leftlogic.stagehq.com/events/2412",
@@ -262,9 +262,30 @@
         "photo": "remy-devtools.jpg"
       },
 
-      "topics" : [],
-      "description": "With Brian's experience with testing a massive number of devices with PhoneGap and Cordova, and more recently the TopCoat project and amazing performance regression testing, he'll be running a day long workshop on how to truly approach test driven development.",
-      "extendedDescription": "Full details of the workshop coming July 9, 2014."
+      "topics" : [
+        {
+          "title": "Concepts",
+          "description": "Truthiness, performance, coverage & continuous integration"
+        },
+        {
+          "title": "API First! Testing HTTP Endpoints",
+          "description": "Local builds, TAP & Tape, Mocha & Chai"
+        },
+        {
+          "title": "Testing Front End JavaScript",
+          "description": "Browserify, ES6 modules, Browsers, Mobile devices and emulators"
+        },
+        {
+          "title": "Testing CSS and HTML",
+          "description": "Removing unused CSS, telemetry: load, paint, fps & automation"
+        },
+        {
+          "title": "Comprehensive",
+          "description": "Reporting, remote debugging, monitoring, security & integrity"
+        }
+      ],
+      "description": "Testing does not guarantee high quality software, however, it improves the chances in creating it. Testing verifies your software continues to work after a quick hack and gives you an easy escape hatch when it does not. Testing tells the world your code does the things you intend it to do building confidence in those whom will ultimately use it. Most importantly, testing builds your own confidence as you progress into your problem domain.",
+      "extendedDescription": "Professionally developed and maintained codebases have tests and run them continuously. Organizations adopting software rightfully expect a test suite and often will want to run it themselves too. Organizations implementing code traditionally siloed quality assurance from development and often let the former slip in preference to a looming, oft artificial, deadline. And those projects usually failed.\n\nSoftware earned a reputation for failure but this is no longer a necessary risk. With modern advancements in testing, continuous integration and practicing continuous delivery you can mitigate technical challenges in releasing, creating value for your organization, and ultimately turning that value into tangible revenue.  These practice have evolved the simple web developer into a dangerously powerful new superhuman role known as Front End Ops.\n\nMitigating downtime due to a JavaScript error is the quiet achievement of Front End Ops but there is a more compelling story. You can measure the value you are creating and you can adjust the targets to improve it. A simple performance test that catches a regression in page load. Page load very often translates directly to revenue. Discovering an optimization that will translate to direct revenue earnings is a very convincing bullet point when asking for your next raise."
     }
   ]
 }
