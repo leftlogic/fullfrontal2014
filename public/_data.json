@@ -74,6 +74,10 @@
         "url": "https://developers.google.com/live/chrome/",
         "img": "chrome.png",
         "blurb": "Google’s mission is to organise the world’s information and make it universally accessible and useful. [Find out more](https://developers.google.com/live/chrome/)."
+      },
+      {
+        "url": "https://uk-amazon.icims.com/jobs/search?ss=1&searchCompany=1454350&mobile=false&width=1677&height=929&bga=true&needsRedirect=false",
+        "img": "amazon.png"
       }
     ],
     "half": [
