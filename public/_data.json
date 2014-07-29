@@ -183,6 +183,21 @@
         "video": false
       },
       {
+        "duration": 40,
+        "title": "Getting Close with the Web",
+        "speaker": {
+          "name": "",
+          "twitter": "",
+          "photo": ""
+        },
+        "description": "The web platform allows us to interact with people on the other side of the planet, but in what other ways can we use it when our devices are right next to each other?",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
         "break": true,
         "title": "Coffee break (30 mins)",
         "duration": 30
