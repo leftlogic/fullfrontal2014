@@ -202,6 +202,36 @@
         "video": false
       },
       {
+        "duration": 40,
+        "title": "A Single Page Story",
+        "speaker": {
+          "name": "",
+          "twitter": "",
+          "photo": ""
+        },
+        "description": "Single page apps have become a legitimate part of the web, but what role should they play? Where do they shine? Where do they fail? How should we think about them and how can we evaluate tools for building them? Henrik will opine on the tradeoffs of abstractions and frameworks and share &yet's impetus for creating Ampersand.js.",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
+        "duration": 40,
+        "title": "Lean Mean CSS Machine",
+        "speaker": {
+          "name": "",
+          "twitter": "",
+          "photo": ""
+        },
+        "description": "A day shouldn’t go by without you removing something. Design techniques and front-end optimization comes together in a behind-the-scenes look at what tools and techniques GitHub uses to make sure things render fast, with as little code as possible, and consistently.",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
         "break": true,
         "title": "Coffee break (30 mins)",
         "duration": 30
