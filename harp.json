@@ -6,9 +6,9 @@
     "config": {
       "phase": 2,
       "soldout": {
-        "conference": false,
-        "workshops": false,
-        "debug-and-tools": false,
+        "conference": true,
+        "workshops": true,
+        "debug-and-tools": true,
         "testing": true
       },
       "mode": "titles",
