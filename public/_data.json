@@ -130,9 +130,9 @@
         "duration": 40,
         "title": "Building the Physical Web together",
         "speaker": {
-          "name": "",
-          "twitter": "",
-          "photo": ""
+          "name": "Scott Jenson",
+          "twitter": "scottjenson",
+          "photo": "scott.jpg"
         },
         "description": "How can we, as the web community, build the next generation of the web, the Physical Web, together?",
         "bio": "",
@@ -143,103 +143,13 @@
       },
       {
         "duration": 40,
-        "title": "Self-hosted JS",
-        "speaker": {
-          "name": "",
-          "twitter": "",
-          "photo": ""
-        },
-        "description": "The parts of V8 and SpiderMonkey that are actually written in JS.  Let's implement an ES.next feature in JS, during the talk!",
-        "bio": "",
-        "links": [],
-        "slides": false,
-        "audio": false,
-        "video": false
-      },
-      {
-        "duration": 40,
         "title": "Moving through seamlessly through offline and online",
         "speaker": {
-          "name": "",
-          "twitter": "",
-          "photo": ""
+          "name": "Caolan McMahon",
+          "twitter": "caolan",
+          "photo": "caolan.jpg"
         },
         "description": "Unlike the always-wired machines of the past, computers are now truly personal, and people move through online and offline seamlessly. We'll explore how and why our apps should do the same, using Hood.ie and offline-first principles to do it in record time.",
-        "bio": "",
-        "links": [],
-        "slides": false,
-        "audio": false,
-        "video": false
-      },
-      {
-        "duration": 40,
-        "title": "Navigating Open Source",
-        "speaker": {
-          "name": "",
-          "twitter": "",
-          "photo": ""
-        },
-        "description": "Distributed, Non-Profit, Sustainable and Open Source: Ghost does nothing the easy way. Discover why the project made these choices and how they're creating a community and shipping code in the open.",
-        "bio": "",
-        "links": [],
-        "slides": false,
-        "audio": false,
-        "video": false
-      },
-      {
-        "duration": 40,
-        "title": "Getting Close with the Web",
-        "speaker": {
-          "name": "",
-          "twitter": "",
-          "photo": ""
-        },
-        "description": "The web platform allows us to interact with people on the other side of the planet, but in what other ways can we use it when our devices are right next to each other?",
-        "bio": "",
-        "links": [],
-        "slides": false,
-        "audio": false,
-        "video": false
-      },
-      {
-        "duration": 40,
-        "title": "A Single Page Story",
-        "speaker": {
-          "name": "",
-          "twitter": "",
-          "photo": ""
-        },
-        "description": "Single page apps have become a legitimate part of the web, but what role should they play? Where do they shine? Where do they fail? How should we think about them and how can we evaluate tools for building them? Henrik will opine on the tradeoffs of abstractions and frameworks and share &yet's impetus for creating Ampersand.js.",
-        "bio": "",
-        "links": [],
-        "slides": false,
-        "audio": false,
-        "video": false
-      },
-      {
-        "duration": 40,
-        "title": "Lean Mean CSS Machine",
-        "speaker": {
-          "name": "",
-          "twitter": "",
-          "photo": ""
-        },
-        "description": "A day shouldn’t go by without you removing something. Design techniques and front-end optimization comes together in a behind-the-scenes look at what tools and techniques GitHub uses to make sure things render fast, with as little code as possible, and consistently.",
-        "bio": "",
-        "links": [],
-        "slides": false,
-        "audio": false,
-        "video": false
-      },
-      {
-        "duration": 40,
-        "title": "Tools for the 21st century musician",
-        "speaker": {
-          "name": "",
-          "twitter": "",
-          "photo": ""
-        },
-        "description": "In this talk we'll learn how Web Audio works and how we can use it to design and play sounds with incredible accuracy, which enables us to create our own real-time instruments and interactive experiences. We'll also identify the ferocious gotchas that are waiting to bite you when you least expect them, and gain valuable Web Audio debugging skills using Firefox's developer tools. At the end of the talk you'll be all set in your path to become 21st century music pioneers—or at least have a ton of creative fun!",
         "bio": "",
         "links": [],
         "slides": false,
@@ -252,15 +162,109 @@
         "duration": 30
       },
       {
+        "duration": 40,
+        "title": "Navigating Open Source",
+        "speaker": {
+          "name": "Hannah Wolfe",
+          "twitter": "ErisDS",
+          "photo": "hannah.jpg"
+        },
+        "description": "Distributed, Non-Profit, Sustainable and Open Source: Ghost does nothing the easy way. Discover why the project made these choices and how they're creating a community and shipping code in the open.",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
+        "duration": 40,
+        "title": "Self-hosted JS",
+        "speaker": {
+          "name": "Andy Wingo",
+          "twitter": "andywingo",
+          "photo": "andy.jpg"
+        },
+        "description": "The parts of V8 and SpiderMonkey that are actually written in JS.  Let's implement an ES.next feature in JS, during the talk!",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+      {
         "break": true,
         "duration": 90,
         "title": "Lunch break (90 mins)"
       },
       {
+        "duration": 40,
+        "title": "Lean Mean CSS Machine",
+        "speaker": {
+          "name": "Tobias Ahlin",
+          "twitter": "tobiasahlin",
+          "photo": "tobi.jpg"
+        },
+        "description": "A day shouldn’t go by without you removing something. Design techniques and front-end optimization comes together in a behind-the-scenes look at what tools and techniques GitHub uses to make sure things render fast, with as little code as possible, and consistently.",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+
+      {
+        "duration": 40,
+        "title": "A Single Page Story",
+        "speaker": {
+          "name": "Henrik Joreteg",
+          "twitter": "HenrikJoreteg",
+          "photo": "henrik.jpg"
+        },
+        "description": "Single page apps have become a legitimate part of the web, but what role should they play? Where do they shine? Where do they fail? How should we think about them and how can we evaluate tools for building them? We will opine on the tradeoffs of abstractions and frameworks and share &yet's impetus for creating Ampersand.js.",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+
+      {
         "break": true,
         "duration": 30,
         "title": "Cake break (30 mins)"
       },
+
+      {
+        "duration": 40,
+        "title": "Tools for the 21st century musician",
+        "speaker": {
+          "name": "Sole Penadés",
+          "twitter": "supersole",
+          "photo": "sole.jpg"
+        },
+        "description": "In this talk we'll learn how Web Audio works and how we can use it to design and play sounds with incredible accuracy, which enables us to create our own real-time instruments and interactive experiences. We'll also identify the ferocious gotchas that are waiting to bite you when you least expect them, and gain valuable Web Audio debugging skills using Firefox's developer tools. At the end of the talk you'll be all set in your path to become 21st century music pioneers—or at least have a ton of creative fun!",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+            {
+        "duration": 40,
+        "title": "Getting Close with the Web",
+        "speaker": {
+          "name": "Ben Foxall",
+          "twitter": "benjaminbenben",
+          "photo": "ben.jpg"
+        },
+        "description": "The web platform allows us to interact with people on the other side of the planet, but in what other ways can we use it when our devices are right next to each other?",
+        "bio": "",
+        "links": [],
+        "slides": false,
+        "audio": false,
+        "video": false
+      },
+
       {
         "break": true,
         "duration": 20,

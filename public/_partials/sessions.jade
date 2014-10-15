@@ -111,7 +111,10 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
                 h3.session-title(role='heading', aria-level='3')= session.title
                 if config.phase >= 3 && session.speaker.name
                   div.session-speaker-name
-                    a(href='#')= session.speaker.name
+                    if session.speaker.twitter
+                      a(target='_blank', href='https://twitter.com/' + session.speaker.twitter)= session.speaker.name
+                    else
+                      span= session.speaker.name
                 if config.phase == 3
                   div.session-time.session-speaker-time
                     =session.start + ' '
