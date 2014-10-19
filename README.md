@@ -1,4 +1,4 @@
-fullfrontal2014
+ffconf2014
 ===============
 
-Full Frontal 2014
+ffconf 2014
