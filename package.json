@@ -1,7 +1,7 @@
 {
   "name": "fullfrontal2014",
   "version": "1.0.0",
-  "description": "Full Frontal 2014",
+  "description": "ffconf 2014",
   "main": "server.js",
   "scripts": {
     "start": "node_modules/.bin/harp server",
