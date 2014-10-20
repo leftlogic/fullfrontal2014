@@ -4,14 +4,14 @@
     "date": "2014-11-07",
     "analytics": "UA-1656750-37",
     "config": {
-      "phase": 3,
+      "phase": 4,
       "soldout": {
         "conference": true,
         "workshops": true,
         "debug-and-tools": true,
         "testing": true
       },
-      "mode": "speakers",
+      "mode": "schedule",
       "comments": {
         "mode-options": "titles|speakers|schedule // just a comment",
         "phase-options": {

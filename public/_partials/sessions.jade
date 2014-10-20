@@ -1,4 +1,5 @@
 - var time = new Date(public._data.sessions.startTime)
+!= partial('/js/_idify')
 
 hr.main-hr
 section.main(class='session-style-' + config.mode, role='region', aria-labelledby='sessions')
@@ -93,7 +94,7 @@ section.main(class='session-style-' + config.mode, role='region', aria-labelledb
       - if (!session.break) totalSessions++;
 
       if (session.break && config.phase == 3) || !session.break
-        li.session-wrapper.sub-hr.js-session(id='slug' + index, data-date=date + ' ' + session.start)
+        li.session-wrapper.sub-hr.js-session(id=idify(session.title), data-date=date + ' ' + session.start)
           if session.break
               header.break
                 h3.schedule-title(role='heading', aria-level='3')= session.title
