@@ -34,9 +34,9 @@ $old-ie: false;
  *
  * © 2014 MyFonts Inc
 */
-@include font-face('Proxima Nova', "http://media.full-frontal.org/fonts/proximanova_regular", normal);
-@include font-face('Proxima Nova', "http://media.full-frontal.org/fonts/proximanova_semibold", 500);
-@include font-face('Proxima Nova', "http://media.full-frontal.org/fonts/proximanova_bold", bold);
+@include font-face('Proxima Nova', "http://media.ffconf.org/fonts/proximanova_regular", normal);
+@include font-face('Proxima Nova', "http://media.ffconf.org/fonts/proximanova_semibold", 500);
+@include font-face('Proxima Nova', "http://media.ffconf.org/fonts/proximanova_bold", bold);
 
 *, *:after, *:before {
   @include box-sizing(border-box);

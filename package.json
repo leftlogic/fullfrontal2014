@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/leftlogic/fullfrontal2014/issues"
   },
-  "homepage": "http://2014.full-frontal.org",
+  "homepage": "http://2014.ffconf.org",
   "private": true,
   "dependencies": {
     "harp": "*",
