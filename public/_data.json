@@ -68,7 +68,7 @@
     }
   ],
   "sponsors": {
-    "available": true,
+    "available": false,
     "full": [
       {
         "url": "https://developers.google.com/live/chrome/",
@@ -110,6 +110,10 @@
       {
         "url": "http://www.fullstacktraining.com/",
         "img": "fst.png"
+      },
+      {
+        "url": "http://www.mediamolecule.com/jobs/javascript_developer",
+        "img": "mediamolecule.png"
       }
     ]
   },
