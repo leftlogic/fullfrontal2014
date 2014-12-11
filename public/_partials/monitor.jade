@@ -44,6 +44,10 @@ svg(viewbox='0 0 700 700', width="100%", height="100%", version='1.1', xmlns='ht
         a.anchor(xlink:href='http://leftlogic.stagehq.com', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', target='_blank')
           rect.button(x=space+'%', y='82%', width=size+'%', height='14%')
           text.cern.link(x='50%', y='92%')!= button_svg
+      if buttonLink
+        a.anchor(xlink:href=buttonLink, xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', target='_blank')
+          rect.button(x=space+'%', y='82%', width=size+'%', height='14%')
+          text.cern.link(x='50%', y='92%')!= button_svg
       else
         rect.button(x=space+'%', y='82%', width=size+'%', height='14%')
         text.cern.link(x='50%', y='92%')= button_svg

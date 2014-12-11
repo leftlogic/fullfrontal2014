@@ -142,8 +142,8 @@
         "bio": "",
         "links": [],
         "slides": false,
-        "audio": false,
-        "video": false
+        "audio": "http://media.ffconf.org/2014/1-scott.mp3",
+        "video": "https://www.youtube.com/watch?v=JBIg3eZ0e6A&index=1&list=PLXmT1r4krsTqrwW2jjXIXuCtFQ-5BIn-s"
       },
       {
         "duration": 40,
@@ -157,8 +157,8 @@
         "bio": "",
         "links": [],
         "slides": false,
-        "audio": false,
-        "video": false
+        "audio": "http://media.ffconf.org/2014/2-caolan.mp3",
+        "video": "https://www.youtube.com/watch?v=-x3Q61dBAwk&index=2&list=PLXmT1r4krsTqrwW2jjXIXuCtFQ-5BIn-s"
       },
       {
         "break": true,
@@ -177,8 +177,8 @@
         "bio": "",
         "links": [],
         "slides": "https://speakerdeck.com/erisds/navigating-open-source",
-        "audio": false,
-        "video": false
+        "audio": "http://media.ffconf.org/2014/3-hannah.mp3",
+        "video": "https://www.youtube.com/watch?v=o3HBe8WhzvE&index=3&list=PLXmT1r4krsTqrwW2jjXIXuCtFQ-5BIn-s"
       },
       {
         "duration": 40,
@@ -192,8 +192,8 @@
         "bio": "",
         "links": [],
         "slides": "https://wingolog.org/pub/ffconf-2014-slides.pdf",
-        "audio": false,
-        "video": false
+        "audio": "http://media.ffconf.org/2014/4-andy.mp3",
+        "video": "https://www.youtube.com/watch?v=YFFvNQWf3Iw&index=4&list=PLXmT1r4krsTqrwW2jjXIXuCtFQ-5BIn-s"
       },
       {
         "break": true,
@@ -212,8 +212,8 @@
         "bio": "",
         "links": [],
         "slides": false,
-        "audio": false,
-        "video": false
+        "audio": "http://media.ffconf.org/2014/5-tobias.mp3",
+        "video": "https://www.youtube.com/watch?v=0uhlFCQkml4&index=5&list=PLXmT1r4krsTqrwW2jjXIXuCtFQ-5BIn-s"
       },
 
       {
@@ -228,8 +228,8 @@
         "bio": "",
         "links": [],
         "slides": "https://speakerdeck.com/henrikjoreteg/ffconf-dot-org",
-        "audio": false,
-        "video": false
+        "audio": "http://media.ffconf.org/2014/6-henrick.mp3",
+        "video": "https://www.youtube.com/watch?v=hrAssE8meRo&index=6&list=PLXmT1r4krsTqrwW2jjXIXuCtFQ-5BIn-s"
       },
 
       {
@@ -250,8 +250,8 @@
         "bio": "",
         "links": ["http://soledadpenades.com/"],
         "slides": "http://soledadpenades.com/files/t/20141107_ffconf/",
-        "audio": false,
-        "video": false
+        "audio": "http://media.ffconf.org/2014/7-soledad.mp3",
+        "video": "https://www.youtube.com/watch?v=F0Iwvp_wtHE&index=7&list=PLXmT1r4krsTqrwW2jjXIXuCtFQ-5BIn-s"
       },
             {
         "duration": 40,
@@ -265,8 +265,8 @@
         "bio": "",
         "links": [],
         "slides": false,
-        "audio": false,
-        "video": false
+        "audio": "http://media.ffconf.org/2014/8-ben.mp3",
+        "video": "https://www.youtube.com/watch?v=NdeJYeFvHnM&index=8&list=PLXmT1r4krsTqrwW2jjXIXuCtFQ-5BIn-s"
       },
 
       {
