@@ -326,15 +326,18 @@
   .session-about-wrapper {
     display: table-cell;
     vertical-align: top;
+    width: 100%
+  }
+  .session-speaker-img-wrapper {
+    width: 167px;
   }
   .session-header {
     // float: left;
     margin-top: 17px;
   }
   .session-content {
-    clear: none;
     display: table;
-    float: left;
+    width: 100%
   }
   .session-links {
     display: table-caption;
