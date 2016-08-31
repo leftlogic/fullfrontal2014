@@ -4,6 +4,13 @@ var harp = require('harp');
 var express = require('express');
 var app = express();
 
+app.disable('x-powered-by');
+
+app.use((req, res, next) => {
+  res.setHeader('x-powered-by', 'ffconf');
+  next();
+});
+
 var outputPath = __dirname + '/www';
 var port = process.env.PORT || 9000;
 
